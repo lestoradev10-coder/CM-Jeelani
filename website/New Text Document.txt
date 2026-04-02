@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Contact | CM Jeelani Dars | Get in Touch</title>
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0f1f;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            color: #ffffff;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1.5rem; }
+        h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
+        h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+        p, li {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: #e2e8f0;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            section { padding: 60px 0; }
+            .container { padding: 0 24px; }
+        }
+
+        /* ========== HEADER (black & beige style) ========== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #0a0c14;
+            padding: 14px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(245, 241, 232, 0.15);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            font-size: 1.6rem;
+            color: #e6d5b8;
+        }
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.25rem;
+            letter-spacing: -0.3px;
+            color: #f5efe2;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: #e9e2d4;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: white;
+        }
+        .social-nav {
+            display: flex;
+            gap: 18px;
+        }
+        .social-nav a {
+            color: #e9e2d4;
+            font-size: 1rem;
+        }
+        .social-nav a:hover {
+            color: white;
+        }
+        .admission-nav-btn {
+            background: #e9dbbc;
+            color: #0a0c14 !important;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .admission-nav-btn:hover {
+            background: #f2e5ca;
+            transform: scale(0.98);
+        }
+        .hamburger {
+            display: none;
+            font-size: 1.6rem;
+            cursor: pointer;
+            color: #f5efe2;
+        }
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 75%;
+            max-width: 320px;
+            height: 100vh;
+            background: #0e121f;
+            backdrop-filter: blur(16px);
+            z-index: 1100;
+            padding: 100px 28px 40px;
+            transition: 0.4s ease;
+            box-shadow: -5px 0 25px rgba(0,0,0,0.6);
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+        }
+        .mobile-menu.active { right: 0; }
+        .mobile-menu a {
+            color: #f0e9dd;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            border-bottom: 1px solid #2d3a5e;
+            padding-bottom: 12px;
+        }
+        .mobile-social {
+            display: flex;
+            gap: 25px;
+            margin-top: 20px;
+            font-size: 1.3rem;
+        }
+        .close-menu {
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: #f0e9dd;
+        }
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .site-header { padding: 14px 24px; }
+        }
+
+        /* ========== CONTACT HERO - LEFT TEXT + RIGHT IMAGE (beige bg) ========== */
+        .contact-hero {
+            background: #faf6ed;
+            padding-top: 140px;
+            padding-bottom: 80px;
+        }
+        .hero-split {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .hero-content-left {
+            flex: 1.2;
+        }
+        .hero-content-left h1 {
+            color: #1f2a3e;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        .hero-content-left p {
+            color: #2c3a4b;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+        .hero-image-right {
+            flex: 0.9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 28px;
+            padding: 20px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+        }
+        .hero-image-right img {
+            max-width: 100%;
+            height: auto;
+            width: 320px;
+            display: block;
+            border-radius: 16px;
+        }
+        @media (max-width: 992px) {
+            .hero-split {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-content-left h1 {
+                text-align: center;
+            }
+            .hero-image-right {
+                width: 80%;
+                padding: 20px;
+            }
+            .hero-image-right img {
+                width: 240px;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-content-left h1 {
+                font-size: 2rem;
+            }
+            .hero-image-right {
+                width: 100%;
+            }
+        }
+
+        /* ========== CONTACT FORM SECTION (inquiry style) ========== */
+        .contact-form-section {
+            background: #111827;
+        }
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        .contact-text {
+            flex: 1;
+        }
+        .contact-text h2 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .contact-text p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+        .contact-details {
+            margin-top: 30px;
+            background: #0f172a;
+            padding: 25px;
+            border-radius: 24px;
+        }
+        .contact-details .detail-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        .contact-details .detail-item i {
+            font-size: 1.3rem;
+            color: #e9dbbc;
+            width: 32px;
+        }
+        .contact-details .detail-item span {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+        }
+        .contact-form {
+            flex: 1.2;
+            background: #0f172a;
+            padding: 30px;
+            border-radius: 28px;
+            box-shadow: 0 15px 30px -12px rgba(0,0,0,0.4);
+        }
+        .form-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .form-row input {
+            flex: 1;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #e9dbbc;
+            background: #1a2538;
+        }
+        .submit-btn {
+            background: #e9dbbc;
+            color: #0a0f1f;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit-btn:hover {
+            background: #f2e2c0;
+            transform: translateY(-2px);
+        }
+
+        /* ========== PROGRAM SECTIONS (same as about page) ========== */
+        .program-block {
+            background: #0a0f1f;
+        }
+        .program-card {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 60px;
+            margin-bottom: 90px;
+        }
+        .program-card.reverse {
+            flex-direction: row-reverse;
+        }
+        .program-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .program-info h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .program-info h3 {
+            color: white;
+        }
+        .program-info p {
+            margin-bottom: 1.2rem;
+            color: #cbd5e6;
+        }
+        .program-info ul {
+            list-style: none;
+            margin: 16px 0;
+        }
+        .program-info li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+            color: #cbd5e6;
+        }
+        .program-info li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #e9dbbc;
+        }
+        .btn-apply {
+            background: white;
+            color: #0a0f1f;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            display: inline-block;
+            text-decoration: none;
+            width: fit-content;
+            transition: 0.2s;
+            margin-top: 20px;
+        }
+        .btn-apply:hover {
+            background: #e9dbbc;
+            transform: translateY(-2px);
+        }
+        .program-img {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .program-img img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 28px;
+            box-shadow: 0 20px 28px -10px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+        .program-img img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Dividers */
+        .skill-divider, .gallery-divider {
+            text-align: center;
+            font-family: monospace;
+            letter-spacing: 4px;
+            margin: 50px 0 40px;
+            color: #b9cf9b;
+            font-size: 1rem;
+        }
+        .gallery-image {
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -10px black;
+            margin-top: 20px;
+        }
+        .gallery-image img {
+            width: 100%;
+            display: block;
+            transition: transform 0.4s;
+        }
+        .gallery-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #1f2a3e;
+            background: #070b14;
+            color: #8f9bb3;
+            font-size: 0.85rem;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s ease;
+        }
+        .animate-on-scroll.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header" id="header">
+    <a href="index.html" class="logo-area">
+        <i class="fas fa-mosque logo-icon"></i>
+        <span class="logo-text">CM JEELANI DARS</span>
+    </a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html" style="font-weight:600; border-bottom:2px solid #e9dbbc;">Contact</a>
+        <a href="#">Account</a>
+        <div class="social-nav">
+            <a href=# target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/saf__academy" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+        <a href="https://form.svhrt.com/69cbaca71223071317ccea46" target="_blank" class="admission-nav-btn">ADMISSION</a>
+    </div>
+    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+    <div class="close-menu" id="closeMenu"><i class="fas fa-times"></i></div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="#">Account</a>
+    <a href="https://form.svhrt.com/69cbaca71223071317ccea46" target="_blank">Admission</a>
+    <div class="mobile-social">
+        <a href=# target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/saf__academy" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+    </div>
+</div>
+
+<main>
+    <!-- CONTACT HERO: BEIGE BACKGROUND | TEXT LEFT | IMAGE RIGHT -->
+    <section class="contact-hero">
+        <div class="container hero-split">
+            <div class="hero-content-left animate-on-scroll">
+                <h1>Submit an Inquiry to Elevate Learning</h1>
+                <p>Our team stands ready to facilitate comprehensive education solutions; submit the form below to commence a collaborative engagement tailored to your objectives.</p>
+                <p>Whether you're a parent seeking admission, a community member wishing to collaborate, or a student looking for guidance, we are here to support your journey toward authentic Islamic knowledge and personal excellence.</p>
+            </div>
+            <div class="hero-image-right animate-on-scroll">
+                <img src="img/contact-illustration.png" alt="Contact CM Jeelani Dars" onerror="this.src='https://placehold.co/400x400/f5efe2/1f2a3e?text=Contact+Us'">
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT FORM + DETAILS SECTION (matching the inquiry style) -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-text animate-on-scroll">
+                    <h2>Get in Touch With Us</h2>
+                    <p>Have questions about our programs, admissions, or spiritual gatherings? Reach out to our team — we’ll respond promptly.</p>
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>CM Jeelani Dars, Markazu Saqafathu Sunniyya Campus, Kerala, India</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+91 12345 67890</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@cmjeelanidars.org</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Sunday - Thursday: 9:00 AM – 6:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form animate-on-scroll">
+                    <form id="contactForm" action="#" method="post">
+                        <div class="form-row">
+                            <input type="text" placeholder="First Name" required>
+                            <input type="text" placeholder="Last Name" required>
+                        </div>
+                        <input type="email" placeholder="Email" required>
+                        <textarea rows="5" placeholder="Message (required)" required></textarea>
+                        <button type="submit" class="submit-btn">SEND</button>
+                    </form>
+                    <p style="font-size:0.7rem; text-align:center; margin-top:18px; color:#7f8ea3;">We respect your privacy. Your information stays confidential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM SECTIONS (same as about page to maintain consistency) -->
+    <section class="program-block">
+        <div class="container">
+            <!-- Chisthi Thahfeelul Qur'an -->
+            <div class="program-card animate-on-scroll">
+                <div class="program-info">
+                    <h2>CHISTHI THAHFEELUL QUR'AN</h2>
+                    <p>Chisthi Thahfeelul Qur'an, under CM Jeelani Dars, is a special program dedicated to teaching the Qur'an with correct pronunciation (Tajweed) and understanding.</p>
+                    <p><strong>Admissions are open for students from 5th standard onwards.</strong></p>
+                    <ul>
+                        <li>Basic to advanced Qur'an recitation</li>
+                        <li>Tajweed and pronunciation training</li>
+                        <li>Hifz (memorization) guidance</li>
+                        <li>Spiritual and moral development</li>
+                        <li>Individual care and guidance</li>
+                    </ul>
+                    <p>Our aim is to help students recite the Qur'an correctly and grow with strong Islamic values in their daily lives.</p>
+                    <a href="https://surveyheart.com/form/69cbaca71223071317ccea46" target="_blank" class="btn-apply">APPLY FOR ADMISSION</a>
+                </div>
+                <div class="program-img">
+                    <img src="img/img6.webp" alt="Quran Hifz" onerror="this.src='https://placehold.co/600x500/1f4770/ffffff?text=Quran+Program'">
+                </div>
+            </div>
+
+            <!-- Hadrath Shadhuliya Gathering -->
+            <div class="program-card reverse animate-on-scroll">
+                <div class="program-info">
+                    <h2>HADRATH SHADHULIYA GATHERING</h2>
+                    <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
+                    <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
+                </div>
+                <div class="program-img">
+                    <img src="img/img7.jpg" alt="Spiritual Gathering" onerror="this.src='https://placehold.co/600x500/3c6e9c/ffffff?text=Gathering'">
+                </div>
+            </div>
+
+            <div class="skill-divider">=== SKILL ENHANCEMENT ===</div>
+
+            <!-- Computer Skill -->
+            <div class="program-card animate-on-scroll">
+                <div class="program-info">
+                    <h3>💻 COMPUTER SKILL ENHANCEMENT</h3>
+                    <p>At CM Jeelani Dars, we provide computer skill training to help students adapt to the modern world. Along with Islamic education, students learn basic computer knowledge, typing skills, and the use of essential software.</p>
+                    <p>Our program helps students improve digital awareness, communication, and practical skills needed for studies and future careers. We aim to develop confident individuals who can balance both religious values and modern technology.</p>
+                </div>
+                <div class="program-img">
+                    <img src="img/img9n.jpg" alt="Computer Skills" onerror="this.src='https://placehold.co/600x400/2b5f8a/ffffff?text=Computer+Training'">
+                </div>
+            </div>
+
+            <!-- Speaking Skill -->
+            <div class="program-card reverse animate-on-scroll">
+                <div class="program-info">
+                    <h3>🗣️ SPEAKING SKILL ENHANCEMENT</h3>
+                    <p>At CM Jeelani Dars, we help students improve their speaking skills to communicate with confidence and clarity. Our program focuses on pronunciation, fluency, and effective expression.</p>
+                    <p>Students are trained through speeches, discussions, and presentations, helping them overcome fear and speak with confidence. We aim to develop strong communicators who can express their ideas clearly in both academic and daily life.</p>
+                </div>
+                <div class="program-img">
+                    <img src="img/img11.webp" alt="Speaking Skills" onerror="this.src='https://placehold.co/600x400/2a658a/ffffff?text=Speaking'">
+                </div>
+            </div>
+
+            <!-- Writing Skill -->
+            <div class="program-card animate-on-scroll">
+                <div class="program-info">
+                    <h3>✍️ WRITING SKILL ENHANCEMENT</h3>
+                    <p>At CM Jeelani Dars, we focus on improving students' writing skills to help them communicate clearly and confidently. Our program develops handwriting, grammar, vocabulary, and creative writing abilities.</p>
+                    <p>Students are guided in essay and paragraph writing, helping them express their ideas in a clear and effective way. We aim to build confident writers who can use their skills for both academic success and daily life.</p>
+                </div>
+                <div class="program-img">
+                    <img src="img/img10.webp" alt="Writing Skills" onerror="this.src='https://placehold.co/600x400/2c628a/ffffff?text=Writing'">
+                </div>
+            </div>
+
+            <div class="gallery-divider">=== GALLARY ===</div>
+            <div class="gallery-image animate-on-scroll">
+                <img src="img/img12.webp" alt="CM Jeelani Dars Gallery" onerror="this.src='https://placehold.co/1200x600/1e3a8a/ffffff?text=Our+Moments'">
+            </div>
+            <p style="text-align:center; margin-top: 24px; font-size:0.85rem; opacity:0.7;"></p>
+        </div>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>© 2026 CM JEELANI DARS — Affiliated to Markazu Saqafathu Sunniyya. All rights reserved.</p>
+        <p style="margin-top: 12px; font-size: 0.75rem;">Empowering minds through authentic Islamic education & holistic development.</p>
+    </div>
+</footer>
+
+<script>
+    // scroll animations
+    const animateElements = document.querySelectorAll('.animate-on-scroll');
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+    animateElements.forEach(el => observer.observe(el));
+
+    // mobile menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const closeMenuBtn = document.getElementById('closeMenu');
+    function openMenu() { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }
+    if (hamburger) hamburger.addEventListener('click', openMenu);
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-menu a').forEach(link => link.addEventListener('click', closeMenu));
+
+    // form submission handler
+    const contactForm = document.getElementById('contactForm');
+    if(contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for reaching out! Our team will get back to you shortly.');
+            contactForm.reset();
+        });
+    }
+</script>
+</body>
+</html>
