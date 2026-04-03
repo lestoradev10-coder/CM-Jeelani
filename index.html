@@ -10,11 +10,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <!-- CSS styles for the modern gallery -->
    
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
     
     <style>
-    
     @media (max-width: 768px) {
+    
+    
+    /* FIX: Reduce .aff-title size on mobile */
+    .aff-title {
+        font-size: 1.8rem !important;
+    }
+}
+    @media (max-width: 768px) {
+        
     /* 1. Force the grid to stack and remove the huge desktop gap */
     .message-grid {
         flex-direction: column !important;
@@ -198,7 +206,12 @@
 .footer-bottom a {
     color: #cbd5e6;
 }
-
+.single-line-title {
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
 /* MOBILE */
 @media (max-width: 768px) {
     .footer-grid {
@@ -268,17 +281,20 @@
         flex-direction: column;
     }
 
-    /* Curriculum */
     .curr-flex {
-        flex-direction: column;
-        gap: 30px;
-    }
+    flex-direction: column;
+}
 
-    /* Chisthi */
-    .chisthi-flex {
-        flex-direction: column;
-        gap: 30px;
-    }
+.curr-img {
+    order: -1;
+}
+   .chisthi-flex {
+    flex-direction: column;
+}
+
+.chisthi-img {
+    order: -1;
+}
 
     /* Gathering */
     .gathering-container {
@@ -392,18 +408,18 @@
 
         /* ========== HEADER ========== */
         .site-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 18px 32px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: all 0.3s ease;
-            background: transparent;
-        }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s ease;
+    background: transparent;
+}
         .site-header.scrolled {
             background: rgba(10, 15, 31, 0.92);
             backdrop-filter: blur(12px);
@@ -411,18 +427,22 @@
             padding: 12px 32px;
         }
         .logo-area {
-            display: flex;
-            align-items: center;
-            cursor: pointer;
-            text-decoration: none;
-        }
-        .logo-area img {
-            height: 52px;
-            width: auto;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
-            margin-left: 80px;
-            display: block;
-        }
+    display: flex;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.logo-area img {
+    /* We must force a specific height because the original file is huge */
+    height: 55px !important; 
+    width: auto !important; /* Maintains aspect ratio so it doesn't squish */
+    margin-left: 0 !important; /* Removed the 80px push */
+    object-fit: contain; /* Ensures the whole 3264px image shows in the 80px space */
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+}
+.logo-area img:hover {
+    transform: scale(1.05);
+}
         /* logo text removed - only image */
         .nav-links { display: flex; align-items: center; gap: 28px; }
         .nav-links a { text-decoration: none; color: #f0f3fa; font-weight: 500; font-size: 0.95rem; transition: 0.2s; }
@@ -441,24 +461,41 @@
         }
         .admission-nav-btn:hover { background: #e2e8f0; transform: scale(0.98); }
         .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: white; }
-        .mobile-menu {
-            position: fixed;
-            top: 0;
-            right: -100%;
-            width: 75%;
-            max-width: 320px;
-            height: 100vh;
-            background: rgba(8, 12, 25, 0.98);
-            backdrop-filter: blur(16px);
-            z-index: 1100;
-            padding: 100px 28px 40px;
-            transition: 0.4s ease;
-            box-shadow: -5px 0 25px rgba(0,0,0,0.5);
-            display: flex;
-            flex-direction: column;
-            gap: 28px;
-        }
-        .mobile-menu.active { right: 0; }
+      .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    width: 100vw; /* FULL SCREEN FIX */
+    height: 100vh;
+
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+
+    background: rgba(8, 12, 25, 0.98);
+    backdrop-filter: blur(16px);
+
+    z-index: 9999; /* VERY IMPORTANT */
+    padding: 100px 28px 40px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}.mobile-menu {
+    padding-top: 120px; /* push content below header */
+}html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}.site-header {
+    z-index: 1000;
+}
+
+.mobile-menu {
+    z-index: 9999;
+}
+        .mobile-menu.active {
+    transform: translateX(0);
+}
         .mobile-menu a { color: white; text-decoration: none; font-size: 1.2rem; font-weight: 500; border-bottom: 1px solid #2d4570; padding-bottom: 12px; }
         .mobile-social { display: flex; gap: 25px; margin-top: 20px; font-size: 1.3rem; }
         .close-menu { position: absolute; top: 25px; right: 25px; font-size: 1.8rem; cursor: pointer; }
@@ -657,31 +694,87 @@
         @media (max-width: 768px) {
             .chisthi-img img { max-height: 300px; }
         }
+/* --- Gathering Section: Centered Professional Look --- */
+.gathering {
+    position: relative;
+    padding: 120px 0; /* More vertical space */
+    background: #0a0f1f;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px;
+}
 
-        /* GATHERING - bg image from img7.jpg, white text */
-        .gathering {
-            position: relative;
-            background: #0a0f1f;
-            overflow: hidden;
-        }
-        .gathering-bg {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url('img/img7.jpg');
-            background-size: cover;
-            background-position: center;
-            filter: brightness(0.4);
-            z-index: 0;
-            transform: scale(1);
-        }
-        .gathering-container {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: stretch;
-            gap: 60px;
-        }
+.gathering-bg {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-image: url('img/img7.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.3) contrast(1.1); /* Darkened for high-contrast white text */
+    z-index: 0;
+}
+
+.gathering-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.gathering-text { 
+    max-width: 850px; /* Optimal reading width */
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 40px;
+    
+}
+
+.gathering-text h2 { 
+    color: white; 
+    font-size: 3rem; /* Bold, large heading */
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gathering-text p { 
+    color: #e2e8f0;
+    opacity: 1; 
+    margin-bottom: 1.5rem; 
+    line-height: 1.8;
+    font-size: 1.2rem; /* Larger font for readability */
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-area img {
+        height: 50px !important;
+        margin-left: 0 !important;
+    }
+    .gathering-text h2 {
+        font-size: 2rem;
+    }
+    .gathering-text {
+        padding: 25px;
+        margin: 0 10px;
+    }
+    .gathering-text p {
+        font-size: 1rem;
+    }
+}
+      
         .gathering-img-pill {
             flex: 1;
             background: white;
@@ -691,10 +784,18 @@
             display: flex;
             align-items: center;
         }
-        .gathering-img-pill img { width: 100%; border-radius: 90px; transition: 0.3s; }
-        .gathering-text { flex: 1.2; display: flex; flex-direction: column; justify-content: center; color: white; }
+        .gathering-img-pill img { width: 100%; border-radius: 90px; transition: 0.3s; }.gathering-text { 
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+    color: white;
+}
         .gathering-text h2, .gathering-text p { color: white; }
-        .gathering-text p { opacity: 0.9; margin-bottom: 1rem; }
+       .gathering-text p { 
+    opacity: 0.9; 
+    margin-bottom: 1.2rem; 
+    line-height: 1.7;
+}
 
         /* skills - equal height */
         .skills { background: #0a0f1f; }
@@ -995,7 +1096,7 @@
 
 <header class="site-header" id="header">
     <a href="index.html" class="logo-area">
-        <img src="img/20260401_134524.webp" alt="CM Jeelani Dars Logo" onerror="this.src='https://placehold.co/60x60/1e3a8a/ffffff?text=Logo'">
+        <img src="gallery/logonewS.PNG" alt="CM Jeelani Dars Logo" onerror="this.src='https://placehold.co/60x60/1e3a8a/ffffff?text=Logo'">
     </a>
     <div class="nav-links">
         <a href="index.html">Home</a>
@@ -1079,7 +1180,7 @@
         <div class="container">
             <div class="aff-row">
                 <div class="aff-text animate-on-scroll">
-                    <div class="aff-title">“ MARKAZ AFFILIATION ”</div>
+                    <div class="aff-title single-line-title">" MARKAZ AFFILIATION "</div>
                     <p class="aff-desc">CM Jeelani Dars is proudly affiliated with Markazu Saqafathu Sunniyya, a renowned institution known for its excellence in Islamic education and social service.</p>
                 </div>
                 <div class="aff-img animate-on-scroll"><img src="img/img3.webp" alt="Markaz" onerror="this.src='https://placehold.co/600x400/1f4a7a/ffffff?text=Markaz'"></div>
@@ -1140,20 +1241,18 @@
         </div>
     </section>
 
-    <!-- Gathering - bg image from img7.jpg -->
-    <section class="gathering">
-        <div class="gathering-bg"></div>
-        <div class="container">
-            <div class="gathering-container">
-                <div class="gathering-img-pill animate-on-scroll"><img src="img/20260401_092158.png" alt="Gathering" onerror="this.src='https://placehold.co/500x400/3c6e9c/ffffff?text=Spiritual'"></div>
-                <div class="gathering-text animate-on-scroll">
-                    <h2>HADRATH SHADHULIYA GATHERING</h2>
-                    <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
-                    <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
-                </div>
+  <section class="gathering">
+    <div class="gathering-bg"></div>
+    <div class="container">
+        <div class="gathering-container animate-on-scroll">
+            <div class="gathering-text">
+                <h2>HADRATH SHADHULIYA GATHERING</h2>
+                <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
+                <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Skills -->
     <section class="skills">
@@ -1426,7 +1525,7 @@ Students are trained through speeches, discussions, and presentations, helping t
 
             <!-- BRAND -->
             <div class="footer-brand">
-                <img src="img/20260401_134524.webp" class="footer-logo">
+                <img src="gallery/logonewS.PNG" class="footer-logo">
                 <p>
                     Nurturing authentic Islamic knowledge, strong character,
                     and spiritual growth through Qur’an and Sunnah.
