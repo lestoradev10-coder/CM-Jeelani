@@ -8,7 +8,211 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts for modern typography -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <!-- CSS styles for the modern gallery -->
+   
+    
+    
     <style>
+    
+    @media (max-width: 768px) {
+    /* 1. Force the grid to stack and remove the huge desktop gap */
+    .message-grid {
+        flex-direction: column !important;
+        gap: 30px !important;
+        align-items: center !important;
+        display: flex !important;
+    }
+
+    /* 2. Reset the text container to be a centered full-width block */
+    .message-text {
+        flex: none !important;
+        max-width: 100% !important; /* Removes the 65% restriction */
+        width: 100% !important;
+        margin-left: 0 !important;   /* Stops pushing it to the right */
+        padding-left: 0 !important;
+        text-align: center !important; /* Centers the text block content */
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important; /* Centers the children (h2, quote, btn) */
+    }
+
+    /* 3. Ensure every individual element inside centers itself */
+    .message-text .hero-welcome, 
+    .message-text h2, 
+    .message-text .quote, 
+    .message-text .author-info,
+    .message-text .author-name, 
+    .message-text .author-title {
+        text-align: center !important;
+        width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    /* 4. Fix the Quote width for mobile readability */
+    .quote {
+        width: 100% !important;
+        font-size: 1.1rem !important;
+        line-height: 1.5 !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* 5. Center the button specifically */
+    .btn-find {
+        align-self: center !important; /* Overrides the flex-start/end */
+        margin: 20px auto 0 !important;
+        display: inline-block !important;
+    }
+
+    /* 6. Fix the Portrait Image size */
+    .portrait-mask {
+        max-width: 280px !important; /* Keeps it from being too huge on mobile */
+        margin: 0 auto !important;
+    }
+}
+.footer-text li {
+    color: #cbd5e6;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}.cm-footer {
+    background: #070c1a;
+    color: #cbd5e6;
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 32px;
+}
+
+/* GRID */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* BRAND */
+.footer-brand h3 {
+    color: white;
+    margin: 15px 0 10px;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+/* CTA BUTTON */
+.footer-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-btn:hover {
+    background: #1d4ed8;
+}
+
+/* LINKS */
+.footer-links h4,
+.footer-contact h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #cbd5e6;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* CONTACT */
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-contact i {
+    margin-right: 8px;
+    color: #7c9bcf;
+}
+
+/* SOCIAL */
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    width: 34px;
+    height: 34px;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #cbd5e6;
+}
+
+.footer-social a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: #cbd5e6;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+        
         /* ===== MOBILE RESPONSIVE FIX ===== */
 @media (max-width: 768px) {
 
@@ -31,20 +235,28 @@
     .hero {
         padding-top: 110px;
     }
-
-    /* Message Section */
-    .message-grid {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .message-text {
-        text-align: left !important;
-    }
-
-    .btn-find {
-        align-self: flex-start;
-    }
+/* Message Section */
+.message-grid {
+    flex-direction: column;
+    gap: 40px;
+}
+.message-text {
+    text-align: left !important;
+}
+.message-text .hero-welcome,
+.message-text h2,
+.message-text .quote,
+.message-text .author-name,
+.message-text .author-title {
+    text-align: left !important;
+}
+.btn-find {
+    align-self: flex-start;
+}
+.portrait-mask {
+    max-width: 100%;
+    border-radius: 30px;
+}
 
     /* Affiliation */
     .aff-row {
@@ -275,32 +487,81 @@
 
         /* USTHAD MESSAGE - text content aligned right */
         .message-section { background: #111827; }
-        .message-grid { display: flex; flex-wrap: wrap; align-items: stretch; gap: 60px; }
-        .portrait-mask {
-            flex: 1;
-            max-width: 380px;
-            border-top-right-radius: 120px;
-            overflow: hidden;
-            box-shadow: 0 20px 30px -10px rgba(0,0,0,0.4);
-            display: flex;
-            align-items: center;
-        }
-        .portrait-mask img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
-        .portrait-mask:hover img { transform: scale(1.02); }
-        .message-text {
-            flex: 1.2;
-            text-align: right;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .message-text .hero-welcome, .message-text h2, .message-text .quote, .message-text .author-name, .message-text .author-title { text-align: right; }
-        .quote { font-size: 1.1rem; font-weight: 500; line-height: 1.55; margin-bottom: 30px; color: #eef3ff; }
-        .btn-find {
-            background: white; color: #0a0f1f; padding: 12px 36px; border-radius: 50px;
-            font-weight: 700; display: inline-block; text-decoration: none; transition: 0.3s;
-            align-self: flex-end;
-        }
+        .message-grid { 
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: stretch; 
+    gap: 180px;  /* INCREASED: more space between image and text */
+    justify-content: space-between;
+}
+.portrait-mask {
+    flex: 1;
+    max-width: 380px;
+    border-radius: 30px;  /* Changed from specific radius to modern consistent rounding */
+    overflow: hidden;
+    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+}
+.portrait-mask img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+.portrait-mask:hover img { transform: scale(1.02); }
+.message-text {
+    flex: 1.2;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: auto;  /* NEW: pushes content to the right */
+    padding-left: 40px;  /* NEW: adds internal spacing */
+    max-width: 65%;  /* NEW: controls width for better right alignment */
+}
+/* CHANGED: All text elements now left-aligned */
+.message-text .hero-welcome, 
+.message-text h2, 
+.message-text .quote, 
+.message-text .author-name, 
+.message-text .author-title { 
+    text-align: left;  /* CHANGED: from 'right' to 'left' */
+}
+
+/* NEW: Author info grouping for better hierarchy */
+.author-info {
+    margin-bottom: 28px;
+}
+.author-name { 
+    font-weight: 700; 
+    font-size: 1.1rem; 
+    margin-bottom: 4px;
+}
+.author-title { 
+    opacity: 0.7; 
+    font-size: 0.9rem;
+}     .quote { 
+    font-size: 1.2rem; 
+    font-weight: 500; 
+    line-height: 1.6; 
+    margin-bottom: 30px; 
+    color: #eef3ff; 
+    max-width: 100%;  /* Full width within the text container */
+    width: 80%;
+}
+       .btn-find {
+    background: white; 
+    color: #0a0f1f; 
+    padding: 14px 38px;  /* Slightly increased padding */
+    border-radius: 50px;
+    font-weight: 700; 
+    display: inline-block; 
+    text-decoration: none; 
+    transition: 0.3s;
+    align-self: flex-start;  /* CHANGED: from 'flex-end' to 'flex-start' - aligns with text start */
+    margin-top: 10px;
+}
+.btn-find:hover { 
+    transform: translateY(-3px); 
+    background: #eef3ff; 
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
         .btn-find:hover { transform: translateY(-2px); background: #e2e8f0; }
 
         /* affiliation - images and content equal height, second row image left content right */
@@ -481,6 +742,253 @@
             .btn-find { align-self: flex-end; }
             .aff-img img, .curr-img img, .chisthi-img img { max-height: 260px; }
         }
+    </style> 
+     <style>
+        /* ===== AUTO SLIDING CAROUSEL GALLERY STYLES ===== */
+        .carousel-gallery {
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 30px 50px -20px rgba(0,0,0,0.5);
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 24px;
+            background: #0a0f1f;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: transform;
+        }
+
+        .carousel-slide {
+            flex-shrink: 0;
+            width: 100%;
+            position: relative;
+            background: #0a0f1f;
+        }
+
+        /* FIXED: Images now display fully without cropping - using contain with custom background */
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            min-height: 450px;
+            max-height: 550px;
+            object-fit: contain;
+            display: block;
+            background: linear-gradient(135deg, #0a0f1f 0%, #0f172a 100%);
+            border-radius: 24px;
+        }
+
+        /* For very tall images, ensure they don't overflow */
+        .carousel-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #0a0f1f 0%, #0f172a 100%);
+        }
+
+        /* Image caption overlay - positioned absolutely over image area */
+        .slide-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+            padding: 30px 30px 20px;
+            color: white;
+            text-align: left;
+            border-radius: 0 0 24px 24px;
+            pointer-events: none;
+        }
+
+        .slide-caption span {
+            font-size: 0.85rem;
+            opacity: 0.85;
+            letter-spacing: 1px;
+        }
+
+        .slide-caption h3 {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            margin-bottom: 0;
+            font-weight: 600;
+        }
+
+        /* Navigation Arrows */
+        .carousel-arrow {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .carousel-arrow:hover {
+            background: rgba(59,130,246,0.8);
+            border-color: transparent;
+            transform: translateY(-50%) scale(1.05);
+        }
+
+        .carousel-arrow i {
+            color: white;
+            font-size: 1.2rem;
+        }
+
+        .carousel-prev {
+            left: 20px;
+        }
+
+        .carousel-next {
+            right: 20px;
+        }
+
+        /* Dots Navigation */
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .dot.active {
+            width: 28px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+        }
+
+        .dot:hover {
+            background: #3b82f6;
+            transform: scale(1.2);
+        }
+
+        
+        .auto-text {
+            font-size: 0.75rem;
+            opacity: 0.8;
+        }
+
+        /* Thumbnail Strip */
+        .thumbnail-strip {
+            max-width: 1000px;
+            margin: 25px auto 0;
+            overflow-x: auto;
+            padding: 10px 0;
+            scrollbar-width: thin;
+        }
+
+        .thumbnail-track {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            opacity: 0.6;
+            background: #0a0f1f;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail.active {
+            border-color: #3b82f6;
+            opacity: 1;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(59,130,246,0.4);
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+            transform: scale(1.03);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .carousel-slide img {
+                min-height: 300px;
+                max-height: 400px;
+            }
+            .carousel-arrow {
+                width: 36px;
+                height: 36px;
+            }
+            .slide-caption {
+                padding: 20px 20px 15px;
+            }
+            .slide-caption h3 {
+                font-size: 1rem;
+            }
+            .thumbnail {
+                width: 55px;
+                height: 55px;
+            }
+            .auto-slide-indicator {
+                bottom: 10px;
+                right: 10px;
+                padding: 5px 12px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-slide img {
+                min-height: 250px;
+                max-height: 350px;
+            }
+            .thumbnail-track {
+                gap: 8px;
+            }
+            .thumbnail {
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        /* For landscape orientation on mobile */
+        @media (max-height: 600px) and (orientation: landscape) {
+            .carousel-slide img {
+                min-height: 250px;
+                max-height: 320px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -493,12 +1001,15 @@
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="contact.html">Contact</a>
-        <a href="#">Login</a>
-        <div class="social-nav">
-            <a href=# target="_blank"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.instagram.com/saf__academy" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-        </div>
+       
+      <div class="social-nav">
+    <a href="https://www.instagram.com/cm_jeelani?igsh=OXljNmNxeDV5em8y" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1Cmqr8etL1/?mibextid=wwXIfr" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
         <a href="https://form.svhrt.com/69cbaca71223071317ccea46" target="_blank" class="admission-nav-btn">ADMISSION</a>
     </div>
     <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
@@ -509,13 +1020,16 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    <a href="#">Login</a>
+    
     <a href="https://form.svhrt.com/69cbaca71223071317ccea46" target="_blank">Admission</a>
     <div class="mobile-social">
-        <a href=# target="_blank"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.instagram.com/saf__academy" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-    </div>
+    <a href="https://www.instagram.com/cm_jeelani?igsh=OXljNmNxeDV5em8y" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/share/1Cmqr8etL1/?mibextid=wwXIfr" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+</div>
 </div>
 
 <main>
@@ -547,13 +1061,15 @@
                     <img src="img/img2.webp" alt="Usthad" onerror="this.src='https://placehold.co/500x600/2c4c7c/ffffff?text=Usthad'">
                 </div>
                 <div class="message-text animate-on-scroll">
-                    <div class="hero-welcome" style="color:#9bb6e0;">INSIGHTFUL LEADERSHIP</div>
-                    <h2>USTHAD'S MESSAGE</h2>
-                    <div class="quote">“CM Jeelani Dars is dedicated to nurturing authentic Islamic knowledge, strong character, and spiritual growth. Our mission is to guide students through the teachings of the Qur’an and Sunnah, preparing them for both faith and life”</div>
-                    <div class="author-name" style="font-weight:700; font-size:1.1rem;">USTHAD ABDUL SAMAD SAQAFI MAYANAD</div>
-                    <div class="author-title" style="opacity:0.7; margin-bottom:24px;">Founder & Director of cm jeelani dars</div>
-                    <a href="https://www.facebook.com/samadsaquafimayanad" target="_blank" class="btn-find">FIND OUT MORE</a>
-                </div>
+    <div class="hero-welcome" style="color:#9bb6e0;">INSIGHTFUL LEADERSHIP</div>
+    <h2>USTHAD'S MESSAGE</h2>
+    <div class="quote">“CM Jeelani Dars is dedicated to nurturing authentic Islamic knowledge, strong character, and spiritual growth. Our mission is to guide students through the teachings of the Qur'an and Sunnah, preparing them for both faith and life”</div>
+    <div class="author-info">
+        <div class="author-name">USTHAD ABDUL SAMAD SAQAFI MAYANAD</div>
+        <div class="author-title">Founder & Director of CM Jeelani Dars</div>
+    </div>
+    <a href="https://www.facebook.com/samadsaquafimayanad" target="_blank" class="btn-find">FIND OUT MORE</a>
+</div>
             </div>
         </div>
     </section>
@@ -662,17 +1178,316 @@ Students are trained through speeches, discussions, and presentations, helping t
         </div>
     </section>
 
-    <!-- Gallery - static image img12.webp -->
-    <section class="gallery">
-        <div class="container">
-            <div class="gallery-divider">=== GALLARY ===</div>
-            <div class="gallery-image-wrapper animate-on-scroll">
-                <img src="img/img12.webp" alt="Gallery Moments" onerror="this.src='https://placehold.co/1200x600/1e3a8a/ffffff?text=Gallery+Moments'">
+<section class="modern-gallery-section">
+    <div class="gallery-container">
+        <div class="skill-divider" style="margin-bottom: 1rem;">=== MEMORIES AND MOMENTS ===</div>
+        <h2 class="gallery-title" style="color: white; text-align: center; font-size: 1.8rem; margin-bottom: 2rem;">OUR GALLERY</h2>
+    </div>
+
+    <!-- AUTO SLIDING CAROUSEL GALLERY - shifts images one by one -->
+    <div class="carousel-gallery">
+        <div class="carousel-container">
+            <div class="carousel-track" id="carouselTrack">
+                <!-- 16 images will be inserted here dynamically via JS -->
             </div>
-            <p style="text-align:center; margin-top:24px; opacity:0.7;"></p>
         </div>
-    </section>
+        
+        <!-- Navigation Dots -->
+        <div class="carousel-dots" id="carouselDots"></div>
+        
+        <!-- Navigation Arrows -->
+        <button class="carousel-arrow carousel-prev" id="carouselPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="carousel-arrow carousel-next" id="carouselNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+       
+    </div>
+
+    <!-- Thumbnail preview strip -->
+    <div class="thumbnail-strip">
+        <div class="thumbnail-track" id="thumbnailTrack">
+            <!-- Thumbnails will be inserted here -->
+        </div>
+    </div>
+
+  
+
+    <script>
+        (function() {
+            // Gallery images array - gal1.jpeg to gal16.jpeg
+            const imageNames = [];
+            for (let i = 1; i <= 16; i++) {
+                imageNames.push(`gallery/gal${i}.jpeg`);
+            }
+            
+            // Optional captions for each image (customizable)
+            const captions = [
+                "Islamic Learning Session", "Students in Discussion", "Quran Recitation Class",
+                "Annual Gathering", "Hifz Program", "Tajweed Training", "Spiritual Moment",
+                "Community Event", "Knowledge Sharing", "Memorable Day", "Blessed Gathering",
+                "Teaching Session", "Student Achievement", "Prayer Time", "Brotherhood", "CM Jeelani Moments"
+            ];
+            
+            let currentIndex = 0;
+            let autoSlideInterval = null;
+            let isAutoSliding = true;
+            const slideIntervalTime = 4000; // 4 seconds per slide
+            
+            // DOM elements
+            const track = document.getElementById('carouselTrack');
+            const dotsContainer = document.getElementById('carouselDots');
+            const prevBtn = document.getElementById('carouselPrev');
+            const nextBtn = document.getElementById('carouselNext');
+          
+            const thumbnailTrack = document.getElementById('thumbnailTrack');
+            
+            // Build carousel slides
+            function buildCarousel() {
+                track.innerHTML = '';
+                imageNames.forEach((imgSrc, idx) => {
+                    const slide = document.createElement('div');
+                    slide.className = 'carousel-slide';
+                   slide.innerHTML = `
+    <img src="${imgSrc}" alt="Gallery ${idx + 1}" onerror="this.src='https://placehold.co/1200x800/1e3a8a/ffffff?text=Image+${idx+1}'">
+`;
+                    track.appendChild(slide);
+                });
+            }
+            
+            // Build dots
+            function buildDots() {
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i < imageNames.length; i++) {
+                    const dot = document.createElement('div');
+                    dot.className = 'dot';
+                    if (i === currentIndex) dot.classList.add('active');
+                    dot.addEventListener('click', () => {
+                        stopAutoSlide();
+                        goToSlide(i);
+                        if (isAutoSliding) startAutoSlide();
+                    });
+                    dotsContainer.appendChild(dot);
+                }
+            }
+            
+            // Build thumbnails
+            function buildThumbnails() {
+                thumbnailTrack.innerHTML = '';
+                imageNames.forEach((imgSrc, idx) => {
+                    const thumb = document.createElement('div');
+                    thumb.className = 'thumbnail';
+                    if (idx === currentIndex) thumb.classList.add('active');
+                    thumb.innerHTML = `<img src="${imgSrc}" alt="Thumb ${idx + 1}" onerror="this.src='https://placehold.co/100x100/1e3a8a/ffffff?text=${idx+1}'">`;
+                    thumb.addEventListener('click', () => {
+                        stopAutoSlide();
+                        goToSlide(idx);
+                        if (isAutoSliding) startAutoSlide();
+                    });
+                    thumbnailTrack.appendChild(thumb);
+                });
+            }
+            
+            // Update active states
+            function updateActiveStates() {
+                // Update dots
+                const dots = document.querySelectorAll('.dot');
+                dots.forEach((dot, idx) => {
+                    if (idx === currentIndex) dot.classList.add('active');
+                    else dot.classList.remove('active');
+                });
+                
+                // Update thumbnails
+                const thumbs = document.querySelectorAll('.thumbnail');
+                thumbs.forEach((thumb, idx) => {
+                    if (idx === currentIndex) thumb.classList.add('active');
+                    else thumb.classList.remove('active');
+                });
+            }
+            
+            // Go to specific slide
+            function goToSlide(index) {
+                if (index < 0) index = imageNames.length - 1;
+                if (index >= imageNames.length) index = 0;
+                currentIndex = index;
+                const slideWidth = track.parentElement.clientWidth;
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+                updateActiveStates();
+            }
+            
+            // Next slide
+            function nextSlide() {
+                goToSlide(currentIndex + 1);
+            }
+            
+            // Previous slide
+            function prevSlide() {
+                goToSlide(currentIndex - 1);
+            }
+            
+            // Auto slide functions
+            function startAutoSlide() {
+                if (autoSlideInterval) clearInterval(autoSlideInterval);
+                autoSlideInterval = setInterval(() => {
+                    nextSlide();
+                }, slideIntervalTime);
+                isAutoSliding = true;
+            }
+            
+            function stopAutoSlide() {
+                if (autoSlideInterval) {
+                    clearInterval(autoSlideInterval);
+                    autoSlideInterval = null;
+                }
+                isAutoSliding = false;
+            }
+            
+            // Handle pause/play
+            function pauseAutoSlide() {
+                stopAutoSlide();
+                isAutoSliding = false;
+                pauseBtn.style.display = 'none';
+                playBtn.style.display = 'flex';
+            }
+            
+            function resumeAutoSlide() {
+                startAutoSlide();
+                isAutoSliding = true;
+                pauseBtn.style.display = 'flex';
+                playBtn.style.display = 'none';
+            }
+            
+            // Handle window resize to maintain correct position
+            function handleResize() {
+                track.style.transform = `translateX(-${currentIndex * 100}%)`;
+            }
+            
+            // Initialize carousel
+            function initCarousel() {
+                buildCarousel();
+                buildDots();
+                buildThumbnails();
+                
+                // Set initial position
+                track.style.transform = 'translateX(0%)';
+                
+                // Event listeners
+                prevBtn.addEventListener('click', () => {
+                    if (isAutoSliding) stopAutoSlide();
+                    prevSlide();
+                    if (isAutoSliding) startAutoSlide();
+                });
+                
+                nextBtn.addEventListener('click', () => {
+                    if (isAutoSliding) stopAutoSlide();
+                    nextSlide();
+                    if (isAutoSliding) startAutoSlide();
+                });
+                
+                
+                
+                window.addEventListener('resize', handleResize);
+                
+                // Start auto sliding
+                startAutoSlide();
+                
+                // Optional: Pause on hover over carousel container only (not arrows)
+                const carouselContainer = document.querySelector('.carousel-container');
+                if (carouselContainer) {
+                    carouselContainer.addEventListener('mouseenter', () => {
+                        if (isAutoSliding) stopAutoSlide();
+                    });
+                    carouselContainer.addEventListener('mouseleave', () => {
+                        if (!isAutoSliding && pauseBtn.style.display !== 'none') {
+                            startAutoSlide();
+                        } else if (pauseBtn.style.display !== 'none' && !autoSlideInterval) {
+                            startAutoSlide();
+                        }
+                    });
+                }
+            }
+            
+            // Wait for DOM to be ready
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', initCarousel);
+            } else {
+                initCarousel();
+            }
+        })();
+    </script>
+</section>
 </main>
+<footer class="cm-footer">
+    <div class="footer-container">
+
+        <div class="footer-grid">
+
+            <!-- BRAND -->
+            <div class="footer-brand">
+                <img src="img/20260401_134524.webp" class="footer-logo">
+                <p>
+                    Nurturing authentic Islamic knowledge, strong character,
+                    and spiritual growth through Qur’an and Sunnah.
+                </p>
+            </div>
+
+            <!-- LINKS -->
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    
+                </ul>
+            </div>
+
+            <!-- PROGRAMS (TEXT ONLY) -->
+            <div class="footer-links">
+                <h4>Programs</h4>
+                <ul class="footer-text">
+                    <li>Hifz Program</li>
+                    <li>Tajweed Learning</li>
+                    <li>Islamic Studies</li>
+                    <li>Arabic Basics</li>
+                </ul>
+            </div>
+
+            <!-- CONTACT -->
+            <div class="footer-contact">
+                <h4>Contact</h4>
+
+               <p>
+    CM Jeelani Dars<br>
+    Institute for Islamic Research and Studies<br>
+    Mayanad, Kozhikode, Kerala
+</p>
+
+                <!-- SOCIAL -->
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/cm_jeelani?igsh=OXljNmNxeDV5em8y" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/1Cmqr8etL1/?mibextid=wwXIfr" target="_blank">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+            <p>© 2026 CM Jeelani Dars. All rights reserved.</p>
+            <p>Designed by <a href="https://www.lestora.com/" target="_blank">Lestora</a></p>
+        </div>
+
+    </div>
+</footer>
+
+
 
 <script>
     // scroll animations
