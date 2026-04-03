@@ -3,848 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>CM Jeelani Dars | Islamic Learning & Excellence</title>
+    <title>About | CM Jeelani Dars | Islamic Learning & Excellence</title>
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Google Fonts for modern typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <!-- CSS styles for the modern gallery -->
-   
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
-    
     <style>
-    @media (max-width: 768px) {
-    
-    
-    /* FIX: Reduce .aff-title size on mobile */
-    .aff-title {
-        font-size: 1.8rem !important;
-    }
-}
-    @media (max-width: 768px) {
-        
-    /* 1. Force the grid to stack and remove the huge desktop gap */
-    .message-grid {
-        flex-direction: column !important;
-        gap: 30px !important;
-        align-items: center !important;
-        display: flex !important;
-    }
-
-    /* 2. Reset the text container to be a centered full-width block */
-    .message-text {
-        flex: none !important;
-        max-width: 100% !important; /* Removes the 65% restriction */
-        width: 100% !important;
-        margin-left: 0 !important;   /* Stops pushing it to the right */
-        padding-left: 0 !important;
-        text-align: center !important; /* Centers the text block content */
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important; /* Centers the children (h2, quote, btn) */
-    }
-
-    /* 3. Ensure every individual element inside centers itself */
-    .message-text .hero-welcome, 
-    .message-text h2, 
-    .message-text .quote, 
-    .message-text .author-info,
-    .message-text .author-name, 
-    .message-text .author-title {
-        text-align: center !important;
-        width: 100% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-    /* 4. Fix the Quote width for mobile readability */
-    .quote {
-        width: 100% !important;
-        font-size: 1.1rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 20px !important;
-    }
-
-    /* 5. Center the button specifically */
-    .btn-find {
-        align-self: center !important; /* Overrides the flex-start/end */
-        margin: 20px auto 0 !important;
-        display: inline-block !important;
-    }
-
-    /* 6. Fix the Portrait Image size */
-    .portrait-mask {
-        max-width: 280px !important; /* Keeps it from being too huge on mobile */
-        margin: 0 auto !important;
-    }
-}
-.footer-text li {
-    color: #cbd5e6;
-    font-size: 0.9rem;
-    margin-bottom: 10px;
-}.cm-footer {
-    background: #070c1a;
-    color: #cbd5e6;
-    padding: 60px 0 30px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-}
-
-.footer-container {
-    max-width: 1280px;
-    margin: auto;
-    padding: 0 32px;
-}
-
-/* GRID */
-.footer-grid {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1.5fr;
-    gap: 40px;
-    margin-bottom: 40px;
-}
-
-/* BRAND */
-.footer-brand h3 {
-    color: white;
-    margin: 15px 0 10px;
-}
-
-.footer-brand p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-}
-
-.footer-logo {
-    height: 50px;
-}
-
-/* CTA BUTTON */
-.footer-btn {
-    display: inline-block;
-    margin-top: 18px;
-    padding: 10px 22px;
-    border-radius: 30px;
-    background: #2563eb;
-    color: white;
-    font-weight: 600;
-    text-decoration: none;
-    font-size: 0.85rem;
-}
-
-.footer-btn:hover {
-    background: #1d4ed8;
-}
-
-/* LINKS */
-.footer-links h4,
-.footer-contact h4 {
-    color: white;
-    margin-bottom: 15px;
-}
-
-.footer-links ul {
-    list-style: none;
-}
-
-.footer-links li {
-    margin-bottom: 10px;
-}
-
-.footer-links a {
-    color: #cbd5e6;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-.footer-links a:hover {
-    color: white;
-}
-
-/* CONTACT */
-.footer-contact p {
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-}
-
-.footer-contact i {
-    margin-right: 8px;
-    color: #7c9bcf;
-}
-
-/* SOCIAL */
-.footer-social {
-    margin-top: 15px;
-    display: flex;
-    gap: 12px;
-}
-
-.footer-social a {
-    width: 34px;
-    height: 34px;
-    background: rgba(255,255,255,0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    color: #cbd5e6;
-}
-
-.footer-social a:hover {
-    background: #2563eb;
-    color: white;
-}
-
-/* BOTTOM */
-.footer-bottom {
-    border-top: 1px solid rgba(255,255,255,0.08);
-    padding-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.8rem;
-}
-
-.footer-bottom a {
-    color: #cbd5e6;
-}
-.single-line-title {
-    white-space: nowrap;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-/* MOBILE */
-@media (max-width: 768px) {
-    .footer-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .footer-bottom {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-}
-        
-        /* ===== MOBILE RESPONSIVE FIX ===== */
-@media (max-width: 768px) {
-
-    /* Header Fix */
-    .logo-area img {
-        margin-left: 0 !important;
-        height: 44px;
-    }
-
-    .site-header {
-        padding: 12px 16px;
-    }
-
-    /* Hero */
-    .hero-grid {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .hero {
-        padding-top: 110px;
-    }
-/* Message Section */
-.message-grid {
-    flex-direction: column;
-    gap: 40px;
-}
-.message-text {
-    text-align: left !important;
-}
-.message-text .hero-welcome,
-.message-text h2,
-.message-text .quote,
-.message-text .author-name,
-.message-text .author-title {
-    text-align: left !important;
-}
-.btn-find {
-    align-self: flex-start;
-}
-.portrait-mask {
-    max-width: 100%;
-    border-radius: 30px;
-}
-
-    /* Affiliation */
-    .aff-row {
-        flex-direction: column;
-        gap: 25px;
-    }
-
-    .aff-row.reverse {
-        flex-direction: column;
-    }
-
-    .curr-flex {
-    flex-direction: column;
-}
-
-.curr-img {
-    order: -1;
-}
-   .chisthi-flex {
-    flex-direction: column;
-}
-
-.chisthi-img {
-    order: -1;
-}
-
-    /* Gathering */
-    .gathering-container {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .gathering-img-pill {
-        max-width: 100%;
-        border-radius: 30px;
-    }
-
-    /* Skills */
-    .skill-card {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .skill-card.reverse {
-        flex-direction: column;
-    }
-
-    /* Images resize */
-    .image-curve-border,
-    .aff-img img,
-    .curr-img img,
-    .chisthi-img img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Blue frame fix */
-    .blue-frame {
-        display: none;
-    }
-
-    /* Text alignment fix */
-    .message-text h2,
-    .message-text .quote,
-    .message-text .author-name,
-    .message-text .author-title {
-        text-align: left !important;
-    }
-
-    /* Reduce section padding */
-    section {
-        padding: 50px 0;
-    }
-}
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background-color: #0a0f1f;
-            font-family: 'Inter', 'Segoe UI', sans-serif;
-            color: #ffffff;
-            line-height: 1.5;
-            overflow-x: hidden;
-        }
-
-        /* consistent container margins & spacing */
-        .container {
-            max-width: 1280px;
-            margin: 0 auto;
-            padding: 0 32px;
-        }
-
-        section {
-            padding: 80px 0;
-        }
-
-        /* smooth animations */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s ease;
-        }
-
-        .animate-on-scroll.revealed {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* typography - increased font sizes */
-        h1, h2, h3, h4 {
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
-        h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1rem; }
-        h2 { font-size: 2.3rem; margin-bottom: 1.5rem; }
-        h3 { font-size: 1.6rem; margin-bottom: 1rem; }
-        p, li, .text-body, .aff-desc, .quote, .curr-list li, .chisthi-list li, .gathering-text p {
-            font-size: 1.05rem;
-            line-height: 1.65;
-            color: #e2e8f0;
-        }
-        .hero-welcome { font-size: 0.9rem; letter-spacing: 3px; }
-        .btn-know, .btn-find, .btn-apply { font-size: 0.95rem; }
-        
-        @media (max-width: 768px) {
-            h1 { font-size: 2.2rem; }
-            h2 { font-size: 1.8rem; }
-            h3 { font-size: 1.4rem; }
-            section { padding: 60px 0; }
-            .container { padding: 0 24px; }
-            p, li { font-size: 0.95rem; }
-        }
-
-        /* ========== HEADER ========== */
-        .site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 18px 32px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: all 0.3s ease;
-    background: transparent;
-}
-        .site-header.scrolled {
-            background: rgba(10, 15, 31, 0.92);
-            backdrop-filter: blur(12px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            padding: 12px 32px;
-        }
-        .logo-area {
-    display: flex;
-    align-items: center;
-    padding: 5px 0;
-}
-
-.logo-area img {
-    /* We must force a specific height because the original file is huge */
-    height: 55px !important; 
-    width: auto !important; /* Maintains aspect ratio so it doesn't squish */
-    margin-left: 0 !important; /* Removed the 80px push */
-    object-fit: contain; /* Ensures the whole 3264px image shows in the 80px space */
-    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
-}
-.logo-area img:hover {
-    transform: scale(1.05);
-}
-        /* logo text removed - only image */
-        .nav-links { display: flex; align-items: center; gap: 28px; }
-        .nav-links a { text-decoration: none; color: #f0f3fa; font-weight: 500; font-size: 0.95rem; transition: 0.2s; }
-        .nav-links a:hover { color: white; }
-        .social-nav { display: flex; gap: 18px; }
-        .social-nav a { color: #f0f3fa; font-size: 1rem; transition: 0.2s; }
-        .social-nav a:hover { color: white; transform: translateY(-2px); }
-        .admission-nav-btn {
-            background: white;
-            color: #0a0f1f !important;
-            padding: 8px 24px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 0.85rem;
-            transition: all 0.2s;
-        }
-        .admission-nav-btn:hover { background: #e2e8f0; transform: scale(0.98); }
-        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: white; }
-      .mobile-menu {
-    position: fixed;
-    top: 0;
-    right: 0;
-
-    width: 100vw; /* FULL SCREEN FIX */
-    height: 100vh;
-
-    transform: translateX(100%);
-    transition: transform 0.4s ease;
-
-    background: rgba(8, 12, 25, 0.98);
-    backdrop-filter: blur(16px);
-
-    z-index: 9999; /* VERY IMPORTANT */
-    padding: 100px 28px 40px;
-
-    display: flex;
-    flex-direction: column;
-    gap: 28px;
-}.mobile-menu {
-    padding-top: 120px; /* push content below header */
-}html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}.site-header {
-    z-index: 1000;
-}
-
-.mobile-menu {
-    z-index: 9999;
-}
-        .mobile-menu.active {
-    transform: translateX(0);
-}
-        .mobile-menu a { color: white; text-decoration: none; font-size: 1.2rem; font-weight: 500; border-bottom: 1px solid #2d4570; padding-bottom: 12px; }
-        .mobile-social { display: flex; gap: 25px; margin-top: 20px; font-size: 1.3rem; }
-        .close-menu { position: absolute; top: 25px; right: 25px; font-size: 1.8rem; cursor: pointer; }
-        @media (max-width: 900px) {
-            .nav-links { display: none; }
-            .hamburger { display: block; }
-            .site-header { padding: 16px 24px; }
-        }
-
-        /* hero */
-        .hero { padding-top: 140px; padding-bottom: 80px; background: linear-gradient(135deg, #0a0f1f 0%, #0f1a2f 100%); }
-        .hero-grid { display: flex; flex-wrap: wrap; align-items: stretch; gap: 50px; }
-        .hero-content { flex: 1.2; display: flex; flex-direction: column; justify-content: center; }
-        .hero-welcome { color: #7c9bcf; margin-bottom: 16px; }
-        .hero p { max-width: 550px; margin-bottom: 36px; }
-        .btn-know {
-            background: white; padding: 14px 38px; border-radius: 50px; font-weight: 700;
-            display: inline-block; text-decoration: none; color: #0a0f1f; transition: all 0.3s;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: fit-content;
-        }
-        .btn-know:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.2); background: #f0f4ff; }
-        .hero-image-area { flex: 1; position: relative; display: flex; align-items: center; }
-        .blue-frame { position: absolute; bottom: -20px; right: -20px; width: 85%; height: 85%; background: #2563eb; z-index: 1; border-radius: 30px; }
-        .image-curve-border { position: relative; z-index: 2; border: 2px solid white; border-top-right-radius: 80px; border-bottom-left-radius: 80px; overflow: hidden; box-shadow: 0 20px 30px -10px rgba(0,0,0,0.3); width: 100%; }
-        .image-curve-border img { width: 100%; display: block; height: 100%; object-fit: cover; }
-
-        /* USTHAD MESSAGE - text content aligned right */
-        .message-section { background: #111827; }
-        .message-grid { 
-    display: flex; 
-    flex-wrap: wrap; 
-    align-items: stretch; 
-    gap: 180px;  /* INCREASED: more space between image and text */
-    justify-content: space-between;
-}
-.portrait-mask {
-    flex: 1;
-    max-width: 380px;
-    border-radius: 30px;  /* Changed from specific radius to modern consistent rounding */
-    overflow: hidden;
-    box-shadow: 0 20px 30px -10px rgba(0,0,0,0.4);
-    display: flex;
-    align-items: center;
-}
-.portrait-mask img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
-.portrait-mask:hover img { transform: scale(1.02); }
-.message-text {
-    flex: 1.2;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: auto;  /* NEW: pushes content to the right */
-    padding-left: 40px;  /* NEW: adds internal spacing */
-    max-width: 65%;  /* NEW: controls width for better right alignment */
-}
-/* CHANGED: All text elements now left-aligned */
-.message-text .hero-welcome, 
-.message-text h2, 
-.message-text .quote, 
-.message-text .author-name, 
-.message-text .author-title { 
-    text-align: left;  /* CHANGED: from 'right' to 'left' */
-}
-
-/* NEW: Author info grouping for better hierarchy */
-.author-info {
-    margin-bottom: 28px;
-}
-.author-name { 
-    font-weight: 700; 
-    font-size: 1.1rem; 
-    margin-bottom: 4px;
-}
-.author-title { 
-    opacity: 0.7; 
-    font-size: 0.9rem;
-}     .quote { 
-    font-size: 1.2rem; 
-    font-weight: 500; 
-    line-height: 1.6; 
-    margin-bottom: 30px; 
-    color: #eef3ff; 
-    max-width: 100%;  /* Full width within the text container */
-    width: 80%;
-}
-       .btn-find {
-    background: white; 
-    color: #0a0f1f; 
-    padding: 14px 38px;  /* Slightly increased padding */
-    border-radius: 50px;
-    font-weight: 700; 
-    display: inline-block; 
-    text-decoration: none; 
-    transition: 0.3s;
-    align-self: flex-start;  /* CHANGED: from 'flex-end' to 'flex-start' - aligns with text start */
-    margin-top: 10px;
-}
-.btn-find:hover { 
-    transform: translateY(-3px); 
-    background: #eef3ff; 
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-}
-        .btn-find:hover { transform: translateY(-2px); background: #e2e8f0; }
-
-        /* affiliation - images and content equal height, second row image left content right */
-        .affiliation { background: #0a0f1f; }
-        .aff-row {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: stretch;
-            gap: 50px;
-            margin-bottom: 70px;
-        }
-        .aff-row.reverse { flex-direction: row-reverse; }
-        .aff-text {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 20px 0;
-        }
-        .aff-title { font-size: 2.2rem; margin-bottom: 20px; }
-        .aff-desc { color: #cbd5e6; margin-bottom: 12px; line-height: 1.65; }
-        .aff-img {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            max-width: 450px;
-        }
-        .aff-img img {
-            width: 100%;
-            height: 100%;
-            max-height: 320px;
-            object-fit: cover;
-            border-radius: 24px;
-            box-shadow: 0 20px 30px -10px black;
-            transition: 0.3s;
-        }
-        .aff-img img:hover { transform: scale(1.02); }
-        .courses-divider {
-            text-align: center; font-family: monospace; letter-spacing: 4px;
-            margin-top: 40px; color: #5f7fbf; font-size: 1rem;
-        }
-        @media (max-width: 768px) {
-            .aff-img { max-width: 100%; }
-            .aff-img img { max-height: 250px; }
-        }
-
-        /* curriculum - equal height */
-        .curriculum { background: #0f1425; }
-        .curr-flex { display: flex; flex-wrap: wrap; align-items: stretch; gap: 60px; }
-        .curr-img { flex: 1; display: flex; align-items: center; }
-        .curr-img img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; border-radius: 28px; box-shadow: 0 20px 30px -10px black; }
-        .curr-content { flex: 1.2; display: flex; flex-direction: column; justify-content: center; }
-        .curr-list { list-style: none; margin: 20px 0; }
-        .curr-list li { margin-bottom: 12px; padding-left: 24px; position: relative; }
-        .curr-list li::before { content: "▹"; position: absolute; left: 0; color: #6c9eff; }
-        .btn-apply {
-            background: white; color: #0a0f1f; padding: 14px 42px; border-radius: 50px;
-            font-weight: 700; display: inline-block; margin-top: 25px; text-decoration: none;
-            transition: all 0.3s; width: fit-content;
-        }
-        .btn-apply:hover { transform: translateY(-3px); background: #eef3ff; box-shadow: 0 8px 20px rgba(0,0,0,0.2); }
-
-        /* CHISTHI - equal height for content and image */
-        .chisthi { background: #0c1122; }
-        .chisthi-flex {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 60px;
-            align-items: stretch;
-        }
-        .chisthi-text {
-            flex: 1.2;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .chisthi-list { list-style: none; margin: 20px 0; }
-        .chisthi-list li { margin-bottom: 12px; padding-left: 24px; position: relative; }
-        .chisthi-list li::before { content: "▹"; position: absolute; left: 0; color: #6c9eff; }
-        .chisthi-img {
-            flex: 1;
-            display: flex;
-            align-items: center;
-        }
-        .chisthi-img img {
-            width: 100%;
-            height: 100%;
-            max-height: 460px;
-            object-fit: cover;
-            border-radius: 32px;
-            box-shadow: 0 20px 30px -10px black;
-        }
-        @media (max-width: 768px) {
-            .chisthi-img img { max-height: 300px; }
-        }
-/* --- Gathering Section: Centered Professional Look --- */
-.gathering {
-    position: relative;
-    padding: 120px 0; /* More vertical space */
-    background: #0a0f1f;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 500px;
-}
-
-.gathering-bg {
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    background-image: url('img/img7.jpg');
-    background-size: cover;
-    background-position: center;
-    filter: brightness(0.3) contrast(1.1); /* Darkened for high-contrast white text */
-    z-index: 0;
-}
-
-.gathering-container {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 32px;
-    display: flex;
-    justify-content: center;
-}
-
-.gathering-text { 
-    max-width: 850px; /* Optimal reading width */
-    margin: 0 auto;
-    text-align: center;
-    color: white;
-    padding: 40px;
-    
-}
-
-.gathering-text h2 { 
-    color: white; 
-    font-size: 3rem; /* Bold, large heading */
-    font-weight: 800;
-    margin-bottom: 1.5rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    font-family: 'Poppins', sans-serif;
-}
-
-.gathering-text p { 
-    color: #e2e8f0;
-    opacity: 1; 
-    margin-bottom: 1.5rem; 
-    line-height: 1.8;
-    font-size: 1.2rem; /* Larger font for readability */
-}
-
-/* Mobile Responsive Adjustments */
-@media (max-width: 768px) {
-    .logo-area img {
-        height: 50px !important;
-        margin-left: 0 !important;
-    }
-    .gathering-text h2 {
-        font-size: 2rem;
-    }
-    .gathering-text {
-        padding: 25px;
-        margin: 0 10px;
-    }
-    .gathering-text p {
-        font-size: 1rem;
-    }
-}
-      
-        .gathering-img-pill {
-            flex: 1;
-            background: white;
-            padding: 12px;
-            border-radius: 100px;
-            max-width: 420px;
-            display: flex;
-            align-items: center;
-        }
-        .gathering-img-pill img { width: 100%; border-radius: 90px; transition: 0.3s; }.gathering-text { 
-    max-width: 700px;
-    margin: auto;
-    text-align: center;
-    color: white;
-}
-        .gathering-text h2, .gathering-text p { color: white; }
-       .gathering-text p { 
-    opacity: 0.9; 
-    margin-bottom: 1.2rem; 
-    line-height: 1.7;
-}
-
-        /* skills - equal height */
-        .skills { background: #0a0f1f; }
-        .skill-divider { text-align: center; font-family: monospace; letter-spacing: 4px; margin-bottom: 60px; color: #7c9bcf; font-size: 1rem; }
-        .skill-card { display: flex; flex-wrap: wrap; align-items: stretch; gap: 60px; margin-bottom: 90px; }
-        .skill-card.reverse { flex-direction: row-reverse; }
-        .skill-text { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-        .skill-text h3 { margin-bottom: 20px; }
-        .skill-media { flex: 1; display: flex; align-items: center; justify-content: center; }
-        .pill-frame-light { background: white; padding: 10px; border-radius: 100px; max-width: 360px; width: 100%; }
-        .pill-frame-light img { width: 100%; border-radius: 90px; display: block; }
-        .circle-overlap { width: 280px; height: 280px; position: relative; }
-        .circle-overlap::before { content: ""; position: absolute; top: -15px; left: -20px; width: 100%; height: 100%; background: #2d4a7c; opacity: 0.3; border-radius: 50%; }
-        .circle-overlap img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; position: relative; z-index: 2; border: 4px solid white; }
-
-        /* GALLERY - static image */
-        .gallery { background: #0f1425; }
-        .gallery-divider { text-align: center; font-family: monospace; letter-spacing: 4px; margin-bottom: 50px; color: #7c9bcf; font-size: 1rem; }
-        .gallery-image-wrapper {
-            max-width: 1000px;
-            margin: 0 auto;
-            border-radius: 32px;
-            overflow: hidden;
-            box-shadow: 0 25px 35px -12px black;
-        }
-        .gallery-image-wrapper img {
-            width: 100%;
-            display: block;
-            transition: transform 0.4s;
-        }
-        .gallery-image-wrapper img:hover { transform: scale(1.02); }
-
-        /* text block margins */
-        .aff-text, .curr-content, .chisthi-text, .skill-text, .hero-content, .message-text, .gathering-text {
-            padding: 16px 0;
-        }
-        .aff-text p, .curr-content p, .chisthi-text p, .skill-text p {
-            margin-bottom: 16px;
-        }
-
-        @media (max-width: 768px) {
-            .circle-overlap { width: 220px; height: 220px; }
-            .skill-card { gap: 30px; }
-            .message-text { text-align: right; }
-            .btn-find { align-self: flex-end; }
-            .aff-img img, .curr-img img, .chisthi-img img { max-height: 260px; }
-        }
-    </style> 
-     <style>
         /* ===== AUTO SLIDING CAROUSEL GALLERY STYLES ===== */
         .carousel-gallery {
             position: relative;
@@ -1090,30 +254,1125 @@
                 max-height: 320px;
             }
         }
+    </style> <style>
+        .footer-text li {
+    color: #cbd5e6;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}.cm-footer {
+    background: #070c1a;
+    color: #cbd5e6;
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container {
+    max-width: 1280px;
+    margin: auto;
+    padding: 0 32px;
+}
+
+/* GRID */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* BRAND */
+.footer-brand h3 {
+    color: white;
+    margin: 15px 0 10px;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+.footer-logo {
+    height: 50px;
+}
+
+/* CTA BUTTON */
+.footer-btn {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 10px 22px;
+    border-radius: 30px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.footer-btn:hover {
+    background: #1d4ed8;
+}
+
+/* LINKS */
+.footer-links h4,
+.footer-contact h4 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+}
+
+.footer-links a {
+    color: #cbd5e6;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* CONTACT */
+.footer-contact p {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.footer-contact i {
+    margin-right: 8px;
+    color: #7c9bcf;
+}
+
+/* SOCIAL */
+.footer-social {
+    margin-top: 15px;
+    display: flex;
+    gap: 12px;
+}
+
+.footer-social a {
+    width: 34px;
+    height: 34px;
+    background: rgba(255,255,255,0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #cbd5e6;
+}
+
+.footer-social a:hover {
+    background: #2563eb;
+    color: white;
+}
+
+/* BOTTOM */
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.footer-bottom a {
+    color: #cbd5e6;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+        /* ================================================
+   COMPLETE MOBILE RESPONSIVE FIXES
+   Add this entire block to your existing CSS
+   ================================================ */
+
+/* Base responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+    
+    .container {
+        padding: 0 20px !important;
+    }
+    
+    section {
+        padding: 50px 0 !important;
+    }
+}
+
+/* Header & Navigation - Mobile First Fixes */
+@media (max-width: 900px) {
+    .site-header {
+        padding: 10px 16px !important;
+    }
+    
+    .logo-area img {
+        height: 38px !important;
+        margin-left: 0 !important;
+    }
+    
+    .nav-links {
+        display: none !important;
+    }
+    
+    .hamburger {
+        display: block !important;
+        font-size: 1.8rem !important;
+    }
+}
+
+/* Mobile Menu (KEEP SAME AS GLOBAL) */
+@media (max-width: 900px) {
+    .mobile-menu {
+        width: 75%;
+        max-width: 320px;
+        padding: 100px 28px 40px;
+    }
+
+    .mobile-menu a {
+        font-size: 1.2rem;
+        padding-bottom: 12px;
+        margin-bottom: 0;
+    }
+
+    .mobile-social {
+        margin-top: 20px;
+        gap: 25px;
+    }
+}
+
+/* About Hero Section - Mobile Optimized WITH MARGIN TOP */
+@media (max-width: 992px) {
+    .hero-split {
+        flex-direction: column !important;
+        gap: 30px !important;
+        text-align: center !important;
+    }
+    
+    .hero-content-left {
+        text-align: center !important;
+        padding: 0 10px !important;
+    }
+    
+    .hero-content-left h1 {
+        font-size: 1.9rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .hero-content-left p {
+        font-size: 0.95rem !important;
+        text-align: justify !important;
+        hyphens: auto !important;
+    }
+    
+    .hero-logo-right {
+        width: 70% !important;
+        margin: 0 auto !important;
+        padding: 20px !important;
+    }
+    
+    .hero-logo-right img {
+        width: 180px !important;
+    }
+}
+
+/* ADDED: Margin Top for Hero Section on Mobile */
+@media (max-width: 768px) {
+    .about-hero {
+        margin-top: 20px !important;
+        padding-top: 100px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-left h1 {
+        font-size: 1.6rem !important;
+    }
+    
+    .hero-logo-right {
+        width: 85% !important;
+    }
+    
+    .hero-logo-right img {
+        width: 140px !important;
+    }
+    
+    /* ADDED: Extra margin for very small screens */
+    .about-hero {
+        margin-top: 15px !important;
+        padding-top: 90px !important;
+    }
+}
+
+/* Inquiry Form Section - Full Mobile Responsive */
+@media (max-width: 768px) {
+    .inquiry-grid {
+        flex-direction: column !important;
+        gap: 30px !important;
+    }
+    
+    .inquiry-text {
+        text-align: center !important;
+    }
+    
+    .inquiry-text h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    .inquiry-text p {
+        font-size: 0.9rem !important;
+        text-align: justify !important;
+    }
+    
+    .inquiry-form {
+        padding: 20px !important;
+        margin: 0 5px !important;
+    }
+    
+    .form-row {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+    
+    .form-row input {
+        width: 100% !important;
+    }
+    
+    input, textarea {
+        padding: 12px 14px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .checkbox-wrap {
+        margin: 15px 0 !important;
+    }
+    
+    .checkbox-wrap label {
+        font-size: 0.8rem !important;
+    }
+    
+    .submit-btn {
+        padding: 12px 20px !important;
+        font-size: 0.85rem !important;
+    }
+}
+
+/* Program Cards - Mobile Layout */
+@media (max-width: 768px) {
+    .program-card {
+        flex-direction: column !important;
+        gap: 25px !important;
+        margin-bottom: 50px !important;
+    }
+    
+    .program-card.reverse {
+        flex-direction: column !important;
+    }
+    
+    .program-info {
+        order: 2 !important;
+        text-align: center !important;
+    }
+    
+    .program-info h2 {
+        font-size: 1.4rem !important;
+    }
+    
+    .program-info h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    .program-info p {
+        font-size: 0.9rem !important;
+        text-align: justify !important;
+    }
+    
+    .program-info ul {
+        text-align: left !important;
+        margin: 15px 0 !important;
+    }
+    
+    .program-info li {
+        font-size: 0.85rem !important;
+        padding-left: 20px !important;
+    }
+    
+    .btn-apply {
+        display: inline-block !important;
+        margin: 15px auto 0 !important;
+        padding: 10px 24px !important;
+        font-size: 0.85rem !important;
+    }
+    
+    .program-img {
+        order: 1 !important;
+        width: 100% !important;
+    }
+    
+    .program-img img {
+        max-height: 240px !important;
+        object-fit: cover !important;
+        border-radius: 20px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .program-img img {
+        max-height: 200px !important;
+    }
+    
+    .program-info h2 {
+        font-size: 1.3rem !important;
+    }
+    
+    .program-info h3 {
+        font-size: 1.2rem !important;
+    }
+}
+
+/* Skill Divider & Gallery - Mobile */
+@media (max-width: 768px) {
+    .skill-divider, .gallery-divider {
+        font-size: 0.8rem !important;
+        letter-spacing: 2px !important;
+        margin: 30px 0 25px !important;
+    }
+    
+    .gallery-image {
+        border-radius: 20px !important;
+    }
+    
+    .gallery-image img {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* Footer - Mobile */
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 30px 0 !important;
+    }
+    
+    .site-footer p {
+        font-size: 0.7rem !important;
+        padding: 0 15px !important;
+    }
+}
+
+/* Typography - General Mobile Improvements */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    
+    h2 {
+        font-size: 1.5rem !important;
+    }
+    
+    h3 {
+        font-size: 1.3rem !important;
+    }
+    
+    p, li {
+        font-size: 0.9rem !important;
+        line-height: 1.55 !important;
+    }
+}
+
+/* Animation Fixes for Mobile */
+@media (max-width: 768px) {
+    .animate-on-scroll {
+        transition: opacity 0.5s ease, transform 0.5s ease !important;
+    }
+}
+
+/* Prevent Horizontal Scroll on All Devices */
+@media (max-width: 1000px) {
+    html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+    }
+    
+    * {
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Small Screen Touch Targets */
+@media (max-width: 480px) {
+    .btn-apply, .submit-btn, .admission-nav-btn {
+        min-height: 44px !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .mobile-menu a {
+        min-height: 48px !important;
+        display: flex !important;
+        align-items: center !important;
+    }
+    
+    .hamburger, .close-menu {
+        min-width: 44px !important;
+        min-height: 44px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+/* Form Elements Better Spacing on Mobile */
+@media (max-width: 600px) {
+    input, textarea, .submit-btn {
+        border-radius: 12px !important;
+    }
+    
+    .inquiry-form {
+        border-radius: 20px !important;
+    }
+}
+
+/* Image Optimization for Mobile */
+@media (max-width: 768px) {
+    .program-img img, .gallery-image img, .hero-logo-right img {
+        backface-visibility: hidden !important;
+        -webkit-backface-visibility: hidden !important;
+    }
+    
+    .program-img img:hover {
+        transform: none !important;
+    }
+}
+
+/* Fix Container Padding Consistency */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 0 28px !important;
+    }
+}
+
+/* Landscape Mode Fixes for Mobile */
+@media (max-width: 900px) and (orientation: landscape) {
+    .about-hero {
+        padding-top: 100px !important;
+        padding-bottom: 40px !important;
+        margin-top: 10px !important;
+    }
+    
+    .program-card {
+        gap: 20px !important;
+    }
+    
+    .program-img img {
+        max-height: 180px !important;
+    }
+    
+    .mobile-menu {
+        padding: 60px 20px 30px !important;
+    }
+    
+    .mobile-menu a {
+        padding-bottom: 10px !important;
+    }
+}
+
+/* Ultra Small Devices (iPhone SE, etc) */
+@media (max-width: 380px) {
+    .container {
+        padding: 0 15px !important;
+    }
+    
+    .hero-content-left h1 {
+        font-size: 1.4rem !important;
+    }
+    
+    .about-hero {
+        margin-top: 15px !important;
+        padding-top: 95px !important;
+    }
+    
+    .inquiry-form {
+        padding: 15px !important;
+    }
+    
+    .program-info h2 {
+        font-size: 1.2rem !important;
+    }
+    
+    .btn-apply {
+        padding: 8px 20px !important;
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Tablet Specific (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero-split {
+        gap: 40px !important;
+    }
+    
+    .hero-content-left h1 {
+        font-size: 2.2rem !important;
+    }
+    
+    .program-card {
+        gap: 40px !important;
+    }
+    
+    .program-img img {
+        max-height: 300px !important;
+    }
+}
+
+/* Fix for iOS input zoom issues */
+@media (max-width: 768px) {
+    input, textarea, select {
+        font-size: 16px !important;
+    }
+}
+
+/* Ensure buttons are easily tappable */
+@media (max-width: 768px) {
+    .btn-apply, .submit-btn, .admission-nav-btn, 
+    .hamburger, .close-menu, .mobile-menu a {
+        cursor: pointer !important;
+    }
+}
+
+/* Improve readability for longer paragraphs */
+@media (max-width: 768px) {
+    .hero-content-left p, 
+    .program-info p,
+    .inquiry-text p {
+        text-align: left !important;
+    }
+    
+    .hero-content-left {
+        text-align: left !important;
+    }
+}
+
+/* Fix any potential overflow issues */
+@media (max-width: 768px) {
+    .program-info ul, 
+    .program-info p,
+    .inquiry-text {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+    
+    img, video, iframe {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+}
+
+/* ADDED: Additional margin-top for hero on tablet devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-hero {
+        margin-top: 10px !important;
+    }
+}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0f1f;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            color: #ffffff;
+            line-height: 1.5;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 32px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        h1 { font-size: 3rem; line-height: 1.2; margin-bottom: 1.5rem; }
+        h2 { font-size: 2.2rem; margin-bottom: 1.2rem; }
+        h3 { font-size: 1.6rem; margin-bottom: 0.8rem; }
+        p, li {
+            font-size: 1rem;
+            line-height: 1.65;
+            color: #e2e8f0;
+        }
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
+            section { padding: 60px 0; }
+            .container { padding: 0 24px; }
+        }
+
+        /* ========== HEADER (Logo Image Only - No Text) ========== */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: #0a0c14;
+            padding: 14px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(245, 241, 232, 0.15);
+            box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+        }
+        .logo-area {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .logo-area img {
+            height: 52px;
+            width: auto;
+            display: block;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+            margin-left: 80px;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: 0.2s;
+        }
+        .nav-links a:hover {
+            color: white;
+        }
+        .social-nav {
+            display: flex;
+            gap: 18px;
+        }
+        .social-nav a {
+            color: white;
+            font-size: 1rem;
+        }
+        .social-nav a:hover {
+            color: white;
+        }
+        .admission-nav-btn {
+            background: white;
+            color: #0a0c14 !important;
+            padding: 8px 24px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+        .admission-nav-btn:hover {
+            background: white;
+            transform: scale(0.98);
+        }/* ===== MOBILE MENU BASE (MISSING PART - ADD THIS) ===== */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    max-width: 320px;
+    height: 100vh;
+    background: rgba(8, 12, 25, 0.98);
+    backdrop-filter: blur(16px);
+    z-index: 1100;
+    padding: 100px 28px 40px;
+    transition: 0.4s ease;
+    box-shadow: -5px 0 25px rgba(0,0,0,0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-bottom: 1px solid #2d4570;
+    padding-bottom: 12px;
+}
+
+.mobile-social {
+    display: flex;
+    gap: 25px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+}
+
+.close-menu {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: white;
+}
+
+        @media (max-width: 900px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .site-header { padding: 12px 24px; }
+            .logo-area img { height: 44px; }
+        }
+
+        /* ========== ABOUT HERO - LEFT TEXT + RIGHT LOGO/IMAGE ========== */
+        .about-hero {
+            background: #faf6ed;
+            padding-top: 140px;
+            padding-bottom: 80px;
+        }
+        .hero-split {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+        .hero-content-left {
+            flex: 1.2;
+        }
+        .hero-content-left h1 {
+            color: #1f2a3e;
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+        .hero-content-left p {
+            color: #2c3a4b;
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 1.2rem;
+        }
+        .hero-logo-right {
+            flex: 0.8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            border-radius: 24px;
+            padding: 30px;
+            box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+        }
+        .hero-logo-right img {
+            max-width: 100%;
+            height: auto;
+            width: 280px;
+            display: block;
+        }
+        @media (max-width: 992px) {
+            .hero-split {
+                flex-direction: column;
+                text-align: center;
+                gap: 40px;
+            }
+            .hero-content-left h1 {
+                text-align: center;
+            }
+            .hero-logo-right {
+                width: 80%;
+                padding: 20px;
+            }
+            .hero-logo-right img {
+                width: 200px;
+            }
+        }
+        @media (max-width: 768px) {
+            .hero-content-left h1 {
+                font-size: 2rem;
+            }
+            .hero-logo-right {
+                width: 100%;
+            }
+        }
+
+        /* ========== INQUIRY FORM SECTION ========== */
+        .inquiry-section {
+            background: #111827;
+        }
+        .inquiry-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: flex-start;
+        }
+        .inquiry-text {
+            flex: 1;
+        }
+        .inquiry-text h2 {
+            font-size: 1.9rem;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .inquiry-text p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+        .inquiry-form {
+            flex: 1.2;
+            background: #0f172a;
+            padding: 30px;
+            border-radius: 28px;
+            box-shadow: 0 15px 30px -12px rgba(0,0,0,0.4);
+        }
+        .form-row {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .form-row input {
+            flex: 1;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #e9dbbc;
+            background: #1a2538;
+        }
+        .checkbox-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 20px 0;
+        }
+        .checkbox-wrap input {
+            width: 18px;
+            height: 18px;
+            margin: 0;
+        }
+        .checkbox-wrap label {
+            color: #cbd5e6;
+            font-size: 0.85rem;
+        }
+        .submit-btn {
+            background: #e9dbbc;
+            color: #0a0f1f;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: 0.2s;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background: #f2e2c0;
+            transform: translateY(-2px);
+        }
+
+        /* ========== PROGRAM SECTIONS ========== */
+        .program-block {
+            background: #0a0f1f;
+        }
+        .program-card {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 60px;
+            margin-bottom: 90px;
+        }
+        .program-card.reverse {
+            flex-direction: row-reverse;
+        }
+        .program-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .program-info h2 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .program-info h3 {
+            color: white;
+        }
+        .program-info p {
+            margin-bottom: 1.2rem;
+            color: #cbd5e6;
+        }
+        .program-info ul {
+            list-style: none;
+            margin: 16px 0;
+        }
+        .program-info li {
+            margin-bottom: 10px;
+            padding-left: 24px;
+            position: relative;
+            color: #cbd5e6;
+        }
+        .program-info li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #e9dbbc;
+        }
+        .btn-apply {
+            background: white;
+            color: #0a0f1f;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 700;
+            display: inline-block;
+            text-decoration: none;
+            width: fit-content;
+            transition: 0.2s;
+            margin-top: 20px;
+        }
+        .btn-apply:hover {
+            background: #e9dbbc;
+            transform: translateY(-2px);
+        }
+        .program-img {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+        .program-img img {
+            width: 100%;
+            height: auto;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 28px;
+            box-shadow: 0 20px 28px -10px rgba(0,0,0,0.5);
+            transition: 0.3s;
+        }
+        .program-img img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Dividers */
+        .skill-divider, .gallery-divider {
+            text-align: center;
+            font-family: monospace;
+            letter-spacing: 4px;
+            margin: 50px 0 40px;
+            color: #b9cf9b;
+            font-size: 1rem;
+        }
+        .gallery-image {
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 20px 30px -10px black;
+            margin-top: 20px;
+        }
+        .gallery-image img {
+            width: 100%;
+            display: block;
+            transition: transform 0.4s;
+        }
+        .gallery-image img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Footer */
+        .site-footer {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid #1f2a3e;
+            background: #070b14;
+            color: #8f9bb3;
+            font-size: 0.85rem;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s cubic-bezier(0.2, 0.9, 0.4, 1.1), transform 0.7s ease;
+        }
+        .animate-on-scroll.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
-
 <header class="site-header" id="header">
     <a href="index.html" class="logo-area">
-        <img src="gallery/logonewS.PNG" alt="CM Jeelani Dars Logo" onerror="this.src='https://placehold.co/60x60/1e3a8a/ffffff?text=Logo'">
+        <img src="gallery/logonewS.png" alt="CM Jeelani Dars Logo" onerror="this.src='https://placehold.co/60x60/1e3a8a/ffffff?text=Logo'">
     </a>
+
     <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html" style="font-weight:600; border-bottom:2px solid white;">About</a>
         <a href="contact.html">Contact</a>
-       
-      <div class="social-nav">
-    <a href="https://www.instagram.com/cm_jeelani?igsh=OXljNmNxeDV5em8y" target="_blank">
-        <i class="fab fa-instagram"></i>
-    </a>
-    <a href="https://www.facebook.com/share/1Cmqr8etL1/?mibextid=wwXIfr" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-</div>
-        <a href="https://form.svhrt.com/69cbaca71223071317ccea46" target="_blank" class="admission-nav-btn">ADMISSION</a>
+        
+
+        <div class="social-nav">
+            <a href="https://www.instagram.com/cm_jeelani?igsh=OXljNmNxeDV5em8y" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1Cmqr8etL1/?mibextid=wwXIfr" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+        </div>
+
+        <a href="https://form.svhrt.com/69cbaca71223071317ccea46" target="_blank" class="admission-nav-btn">
+            ADMISSION
+        </a>
     </div>
-    <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
@@ -1121,7 +1380,7 @@
     <a href="index.html">Home</a>
     <a href="about.html">About</a>
     <a href="contact.html">Contact</a>
-    
+  
     <a href="https://form.svhrt.com/69cbaca71223071317ccea46" target="_blank">Admission</a>
     <div class="mobile-social">
     <a href="https://www.instagram.com/cm_jeelani?igsh=OXljNmNxeDV5em8y" target="_blank">
@@ -1134,150 +1393,126 @@
 </div>
 
 <main>
-    <!-- Hero -->
-    <section class="hero">
+    <!-- ABOUT HERO: TEXT LEFT | LOGO/IMAGE RIGHT -->
+    <section class="about-hero">
+        <div class="container hero-split">
+            <div class="hero-content-left animate-on-scroll">
+                <h1>ADVANCING ISLAMIC LEARNING THROUGH KNOWLEDGE AND GUIDANCE</h1>
+                <p>CM Jeelani Dars, affiliated to Markazu Saqafathu Sunniyya, stands as a center of excellence dedicated to nurturing authentic Islamic knowledge, moral values, and intellectual growth. Our institution is committed to providing comprehensive educational programs that empower students to understand the principles of Islam deeply and apply them meaningfully in their daily lives.</p>
+                <p>Through a balanced integration of traditional scholarship and contemporary learning approaches, we strive to develop well-rounded individuals grounded in faith, discipline, and social responsibility. Our curriculum is designed to strengthen spiritual awareness, enhance critical thinking, and cultivate a lifelong commitment to learning.</p>
+                <p>By fostering a supportive and inspiring environment, CM Jeelani Dars prepares students to serve the community with wisdom, integrity, and compassion. We aim to build future scholars and leaders who contribute positively to society while upholding the timeless teachings of Islam.</p>
+            </div>
+            <div class="hero-logo-right animate-on-scroll">
+                <img src="img/img13.webp" alt="CM Jeelani Dars Logo" onerror="this.src='https://placehold.co/300x300/1e3a8a/ffffff?text=Logo'">
+            </div>
+        </div>
+    </section>
+
+    <!-- INQUIRY FORM SECTION -->
+    <section class="inquiry-section">
         <div class="container">
-            <div class="hero-grid">
-                <div class="hero-content animate-on-scroll">
-                    <div class="hero-welcome">welcome to cm jeelani</div>
-                    <h1>“20 Years of Academic Excellence and Exploration”</h1>
-                    <p>Comprehensive educational resources enable professionals to acquire specialized skills, implement proven methodologies, and demonstrate measurable performance improvements across evolving disciplines.</p>
-                    <a href="about.html" class="btn-know">KNOW MORE</a>
+            <div class="inquiry-grid">
+                <div class="inquiry-text animate-on-scroll">
+                    <h2>Discuss Your Learning Objectives With Our Team</h2>
+                    <p>Submit the inquiry form to initiate a detailed conversation regarding customized learning strategies that align precisely with your institutional goals.</p>
+                    <p style="font-size:0.9rem; opacity:0.7;"><i class="fas fa-arrow-right"></i> We respect your privacy and respond within 48 hours.</p>
                 </div>
-                <div class="hero-image-area animate-on-scroll">
-                    <div class="blue-frame"></div>
-                    <div class="image-curve-border">
-                        <img src="img/img1.webp" alt="Students" onerror="this.src='https://placehold.co/600x700/1e3a8a/ffffff?text=Students'">
-                    </div>
+                <div class="inquiry-form animate-on-scroll">
+                    <form id="aboutInquiryForm" action="#" method="post">
+                        <div class="form-row">
+                            <input type="text" placeholder="First Name" required>
+                            <input type="text" placeholder="Last Name" required>
+                        </div>
+                        <input type="email" placeholder="Email" required>
+                        <div class="checkbox-wrap">
+                            <input type="checkbox" id="newsSignup">
+                            <label for="newsSignup">Sign up for news and updates</label>
+                        </div>
+                        <textarea rows="5" placeholder="Message (required)" required></textarea>
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+                    <p style="font-size:0.7rem; text-align:center; margin-top:18px; color:#7f8ea3;">By submitting, you agree to our terms.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Usthad Message - text aligned right -->
-    <section class="message-section">
+    <!-- PROGRAM SECTIONS -->
+    <section class="program-block">
         <div class="container">
-            <div class="message-grid">
-                <div class="portrait-mask animate-on-scroll">
-                    <img src="img/img2.webp" alt="Usthad" onerror="this.src='https://placehold.co/500x600/2c4c7c/ffffff?text=Usthad'">
-                </div>
-                <div class="message-text animate-on-scroll">
-    <div class="hero-welcome" style="color:#9bb6e0;">INSIGHTFUL LEADERSHIP</div>
-    <h2>USTHAD'S MESSAGE</h2>
-    <div class="quote">“CM Jeelani Dars is dedicated to nurturing authentic Islamic knowledge, strong character, and spiritual growth. Our mission is to guide students through the teachings of the Qur'an and Sunnah, preparing them for both faith and life”</div>
-    <div class="author-info">
-        <div class="author-name">USTHAD ABDUL SAMAD SAQAFI MAYANAD</div>
-        <div class="author-title">Founder & Director of CM Jeelani Dars</div>
-    </div>
-    <a href="https://www.facebook.com/samadsaquafimayanad" target="_blank" class="btn-find">FIND OUT MORE</a>
-</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Affiliation - first row: left content right image, second row: left image right content -->
-    <section class="affiliation">
-        <div class="container">
-            <div class="aff-row">
-                <div class="aff-text animate-on-scroll">
-                    <div class="aff-title single-line-title">" MARKAZ AFFILIATION "</div>
-                    <p class="aff-desc">CM Jeelani Dars is proudly affiliated with Markazu Saqafathu Sunniyya, a renowned institution known for its excellence in Islamic education and social service.</p>
-                </div>
-                <div class="aff-img animate-on-scroll"><img src="img/img3.webp" alt="Markaz" onerror="this.src='https://placehold.co/600x400/1f4a7a/ffffff?text=Markaz'"></div>
-            </div>
-            <!-- Second row: image left, content right -->
-            <div class="aff-row">
-                <div class="aff-img animate-on-scroll"><img src="img/img4.webp" alt="Classroom" onerror="this.src='https://placehold.co/600x400/1f4a7a/ffffff?text=Classroom'"></div>
-                <div class="aff-text animate-on-scroll"><p class="aff-desc">Through this affiliation, we follow a well-structured and authentic curriculum that ensures quality education, discipline, and strong moral values. This connection strengthens our mission to provide students with reliable knowledge and proper guidance based on the teachings of Islam.</p></div>
-            </div>
-            <div class="courses-divider">=== courses ===</div>
-        </div>
-    </section>
-
-    <!-- Curriculum -->
-    <section class="curriculum">
-        <div class="container">
-            <div class="curr-flex">
-                <div class="curr-img animate-on-scroll"><img src="img/img5.webp" alt="Quran recitation" onerror="this.src='https://placehold.co/550x450/284a72/ffffff?text=Quran'"></div>
-                <div class="curr-content animate-on-scroll">
-                    <h2>CM JEELANI DARS</h2>
-                    <p>CM Jeelani Dars is affiliated to <strong>Markazu Saqafathu Sunniyya</strong> and offers a well-structured Islamic learning program starting from the basics of Qur’an recitation (Makharij) to advanced studies. Admissions are open for students from <strong>6th standard and above</strong>.</p>
-                    <h3 style="margin: 24px 0 12px;">Our curriculum includes:</h3>
-                    <ul class="curr-list">
-                        <li>Qur’an recitation with correct pronunciation</li>
-                        <li>Tajweed and Hifz (memorization)</li>
-                        <li>Islamic studies and moral education</li>
-                        <li>Arabic language basics</li>
-                        <li>Personality and character development</li>
-                    </ul>
-                    <p>We focus on building strong faith, good character, and disciplined living, preparing students to follow Islamic values in their daily lives.</p>
-                    <a href="https://surveyheart.com/form/69cbaca71223071317ccea46" target="_blank" class="btn-apply">APPLY FOR ADMISSION</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Chisthi - equal height -->
-    <section class="chisthi">
-        <div class="container">
-            <div class="chisthi-flex">
-                <div class="chisthi-text animate-on-scroll">
+            <!-- Chisthi Thahfeelul Qur'an -->
+            <div class="program-card animate-on-scroll">
+                <div class="program-info">
                     <h2>CHISTHI THAHFEELUL QUR'AN</h2>
-                    <p>Chisthi Thahfeelul Qur'an, under CM Jeelani Dars, is a special program dedicated to teaching the Qur’an with correct pronunciation (Tajweed) and understanding.</p>
-                    <p style="font-weight:600; margin: 16px 0;">Admissions are open for students from 5th standard onwards.</p>
-                    <h3 style="margin: 20px 0 12px;">The program includes:</h3>
-                    <ul class="chisthi-list">
-                        <li>Basic to advanced Qur’an recitation</li>
+                    <p>Chisthi Thahfeelul Qur'an, under CM Jeelani Dars, is a special program dedicated to teaching the Qur'an with correct pronunciation (Tajweed) and understanding.</p>
+                    <p><strong>Admissions are open for students from 5th standard onwards.</strong></p>
+                    <ul>
+                        <li>Basic to advanced Qur'an recitation</li>
                         <li>Tajweed and pronunciation training</li>
                         <li>Hifz (memorization) guidance</li>
                         <li>Spiritual and moral development</li>
                         <li>Individual care and guidance</li>
                     </ul>
-                    <p>Our aim is to help students recite the Qur’an correctly and grow with strong Islamic values.</p>
+                    <p>Our aim is to help students recite the Qur'an correctly and grow with strong Islamic values in their daily lives.</p>
                     <a href="https://surveyheart.com/form/69cbaca71223071317ccea46" target="_blank" class="btn-apply">APPLY FOR ADMISSION</a>
                 </div>
-                <div class="chisthi-img animate-on-scroll"><img src="img/img6.webp" alt="Hifz" onerror="this.src='https://placehold.co/550x500/1f4770/ffffff?text=Quran+Hifz'"></div>
+                <div class="program-img">
+                    <img src="img/img6.webp" alt="Quran Hifz" onerror="this.src='https://placehold.co/600x500/1f4770/ffffff?text=Quran+Program'">
+                </div>
             </div>
-        </div>
-    </section>
 
-  <section class="gathering">
-    <div class="gathering-bg"></div>
-    <div class="container">
-        <div class="gathering-container animate-on-scroll">
-            <div class="gathering-text">
-                <h2>HADRATH SHADHULIYA GATHERING</h2>
-                <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
-                <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
+            <!-- Hadrath Shadhuliya Gathering -->
+            <div class="program-card reverse animate-on-scroll">
+                <div class="program-info">
+                    <h2>HADRATH SHADHULIYA GATHERING</h2>
+                    <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
+                    <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
+                </div>
+                <div class="program-img">
+                    <img src="img/img7.jpg" alt="Spiritual Gathering" onerror="this.src='https://placehold.co/600x500/3c6e9c/ffffff?text=Gathering'">
+                </div>
             </div>
-        </div>
-    </div>
-</section>
 
-    <!-- Skills -->
-    <section class="skills">
-        <div class="container">
             <div class="skill-divider">=== SKILL ENHANCEMENT ===</div>
-            <div class="skill-card">
-                <div class="skill-text animate-on-scroll"><h3>COMPUTER SKILL ENHANCEMENT</h3><p>At CM Jeelani Dars, we provide computer skill training to help students adapt to the modern world. Along with Islamic education, students learn basic computer knowledge, typing skills, and the use of essential software.</p><p>Our program helps students improve digital awareness, communication, and practical skills needed for studies and future careers.We aim to develop confident individuals who can balance both religious values and modern technology.</p></div>
-                <div class="skill-media animate-on-scroll"><div class="pill-frame-light"><img src="img/img9n.jpg" alt="Computer" onerror="this.src='https://placehold.co/450x320/2b5f8a/ffffff?text=Computer'"></div></div>
-            </div>
-            <div class="skill-card reverse">
-                <div class="skill-text animate-on-scroll"><h3>WRITING SKILL ENHANCEMENT</h3><p>At CM Jeelani Dars, we focus on improving students’ writing skills to help them communicate clearly and confidently. Our program develops handwriting, grammar, vocabulary, and creative writing abilities.
 
-Students are guided in essay and paragraph writing, helping them express their ideas in a clear and effective way. We aim to build confident writers who can use their skills for both academic success and daily life.</p></div>
-                <div class="skill-media animate-on-scroll"><div class="circle-overlap"><img src="img/img10.webp" alt="Writing" onerror="this.src='https://placehold.co/400x400/2c628a/ffffff?text=Writing'"></div></div>
+            <!-- Computer Skill -->
+            <div class="program-card animate-on-scroll">
+                <div class="program-info">
+                    <h3>COMPUTER SKILL ENHANCEMENT</h3>
+                    <p>At CM Jeelani Dars, we provide computer skill training to help students adapt to the modern world. Along with Islamic education, students learn basic computer knowledge, typing skills, and the use of essential software.</p>
+                    <p>Our program helps students improve digital awareness, communication, and practical skills needed for studies and future careers. We aim to develop confident individuals who can balance both religious values and modern technology.</p>
+                </div>
+                <div class="program-img">
+                    <img src="img/img9n.jpg" alt="Computer Skills" onerror="this.src='https://placehold.co/600x400/2b5f8a/ffffff?text=Computer+Training'">
+                </div>
             </div>
-            <div class="skill-card">
-                <div class="skill-text animate-on-scroll"><h3>SPEAKING SKILL ENHANCEMENT</h3><p>At CM Jeelani Dars, we help students improve their speaking skills to communicate with confidence and clarity. Our program focuses on pronunciation, fluency, and effective expression.
 
-Students are trained through speeches, discussions, and presentations, helping them overcome fear and speak with confidence. We aim to develop strong communicators who can express their ideas clearly in both academic and daily life.</p></div>
-                <div class="skill-media animate-on-scroll"><div class="circle-overlap"><img src="img/img11.webp" alt="Speaking" onerror="this.src='https://placehold.co/400x400/2a658a/ffffff?text=Speaking'"></div></div>
+            <!-- Speaking Skill -->
+            <div class="program-card reverse animate-on-scroll">
+                <div class="program-info">
+                    <h3>WRITING SKILL ENHANCEMENT</h3>
+                    <p>At CM Jeelani Dars, we focus on improving students' writing skills to help them communicate clearly and confidently. Our program develops handwriting, grammar, vocabulary, and creative writing abilities.</p>
+                    <p>Students are guided in essay and paragraph writing, helping them express their ideas in a clear and effective way. We aim to build confident writers who can use their skills for both academic success and daily life.</p>
+                </div>
+                <div class="program-img">
+                    <img src="img/img10.webp" alt="Writing Skills" onerror="this.src='https://placehold.co/600x400/2c628a/ffffff?text=Writing'">
+                </div>
+                    
             </div>
-        </div>
-    </section>
 
-<section class="modern-gallery-section">
+            <!-- Writing Skill -->
+            <div class="program-card animate-on-scroll">
+                <div class="program-info">
+                    <h3> SPEAKING SKILL ENHANCEMENT</h3>
+                    <p>At CM Jeelani Dars, we help students improve their speaking skills to communicate with confidence and clarity. Our program focuses on pronunciation, fluency, and effective expression.</p>
+                    <p>Students are trained through speeches, discussions, and presentations, helping them overcome fear and speak with confidence. We aim to develop strong communicators who can express their ideas clearly in both academic and daily life.</p>
+                </div>
+                <div class="program-img">
+                    <img src="img/img11.webp" alt="Speaking Skills" onerror="this.src='https://placehold.co/600x400/2a658a/ffffff?text=Speaking'">
+                </div>
+            </div>
+
+           <section class="modern-gallery-section">
     <div class="gallery-container">
         <div class="skill-divider" style="margin-bottom: 1rem;">=== MEMORIES AND MOMENTS ===</div>
         <h2 class="gallery-title" style="color: white; text-align: center; font-size: 1.8rem; margin-bottom: 2rem;">OUR GALLERY</h2>
@@ -1517,7 +1752,9 @@ Students are trained through speeches, discussions, and presentations, helping t
         })();
     </script>
 </section>
+    </section>
 </main>
+
 <footer class="cm-footer">
     <div class="footer-container">
 
@@ -1525,7 +1762,7 @@ Students are trained through speeches, discussions, and presentations, helping t
 
             <!-- BRAND -->
             <div class="footer-brand">
-                <img src="gallery/logonewS.PNG" class="footer-logo">
+                <img src="gallery/logonewS.png" class="footer-logo">
                 <p>
                     Nurturing authentic Islamic knowledge, strong character,
                     and spiritual growth through Qur’an and Sunnah.
@@ -1587,7 +1824,6 @@ Students are trained through speeches, discussions, and presentations, helping t
 </footer>
 
 
-
 <script>
     // scroll animations
     const animateElements = document.querySelectorAll('.animate-on-scroll');
@@ -1598,25 +1834,28 @@ Students are trained through speeches, discussions, and presentations, helping t
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+    }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
     animateElements.forEach(el => observer.observe(el));
 
-    // hamburger menu
+    // mobile menu
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenuBtn = document.getElementById('closeMenu');
     function openMenu() { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; }
     function closeMenu() { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }
-    hamburger?.addEventListener('click', openMenu);
-    closeMenuBtn?.addEventListener('click', closeMenu);
+    if (hamburger) hamburger.addEventListener('click', openMenu);
+    if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
     document.querySelectorAll('.mobile-menu a').forEach(link => link.addEventListener('click', closeMenu));
 
-    // sticky header
-    window.addEventListener('scroll', () => {
-        const header = document.getElementById('header');
-        if (window.scrollY > 50) header.classList.add('scrolled');
-        else header.classList.remove('scrolled');
-    });
+    // form submission
+    const form = document.getElementById('aboutInquiryForm');
+    if(form) {
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your inquiry. Our team will reach out soon.');
+            form.reset();
+        });
+    }
 </script>
 </body>
 </html>
