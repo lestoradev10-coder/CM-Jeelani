@@ -9,6 +9,46 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <style>
+        .footer-phone {
+    margin: 10px 0;
+}
+
+.footer-phone i {
+    margin-right: 8px;
+    width: 16px;
+}
+
+.footer-phone a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-phone a:hover {
+    text-decoration: underline;
+}
+/* ===== MOBILE: IMAGE ABOVE TEXT FIX ===== */
+@media (max-width: 992px) {
+
+    .program-card {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* 🔥 FORCE IMAGE FIRST */
+    .program-img {
+        order: -1;
+    }
+
+    .program-info {
+        order: 1;
+    }
+
+    /* REMOVE reverse issue completely */
+    .program-card.reverse {
+        flex-direction: column;
+    }
+}
+        
          .footer-text li {
     color: #cbd5e6;
     font-size: 0.9rem;
@@ -348,13 +388,15 @@
     min-width: 140px; /* 🔥 ensures full text fits */
 
     transition: all 0.25s ease;
-}  .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: white; }
+}  .hamburger { display: none; font-size: 1.8rem; cursor: pointer; color: white; }.mobile-menu {
+    width: 100%;        /* 🔥 FULL SCREEN */
+    max-width: none;    /* remove limit */
+}
         .mobile-menu {
             position: fixed;
             top: 0;
             right: -100%;
-            width: 75%;
-            max-width: 320px;
+            
             height: 100vh;
             background: rgba(8, 12, 25, 0.98);
             backdrop-filter: blur(16px);
@@ -1016,7 +1058,7 @@
 
 <header class="site-header" id="header">
     <a href="index.html" class="logo-area">
-        <img src="img/20260401_134524.webp" alt="CM Jeelani Dars Logo" onerror="this.src='https://placehold.co/60x60/1e3a8a/ffffff?text=Logo'">
+        <img src="gallery/logonewS.png" alt="CM Jeelani Dars Logo" onerror="this.src='https://placehold.co/60x60/1e3a8a/ffffff?text=Logo'">
     </a>
     <div class="nav-links">
         <a href="index.html">Home</a>
@@ -1140,7 +1182,7 @@
                     <p>Our program helps students improve digital awareness, communication, and practical skills needed for studies and future careers. We aim to develop confident individuals who can balance both religious values and modern technology.</p>
                 </div>
                 <div class="program-img">
-                    <img src="img/img9n.jpg" alt="Computer Skills" onerror="this.src='https://placehold.co/600x400/2b5f8a/ffffff?text=Computer+Training'">
+                    <img src="gallery/computer.jpeg" alt="Computer Skills" onerror="this.src='https://placehold.co/600x400/2b5f8a/ffffff?text=Computer+Training'">
                 </div>
             </div>
 
@@ -1166,7 +1208,7 @@
                 </div>
                 <div class="program-img">
                     <img src="img/img11.webp" alt="Speaking Skills" onerror="this.src='https://placehold.co/600x400/2a658a/ffffff?text=Speaking'">
-                </div>
+                </div></div>
                     
            <section class="modern-gallery-section">
     <div class="gallery-container">
@@ -1417,7 +1459,7 @@
 
             <!-- BRAND -->
             <div class="footer-brand">
-                <img src="img/20260401_134524.webp" class="footer-logo">
+                <img src="gallery/logonewS.png" class="footer-logo">
                 <p>
                     Nurturing authentic Islamic knowledge, strong character,
                     and spiritual growth through Qur’an and Sunnah.
@@ -1450,11 +1492,19 @@
             <div class="footer-contact">
                 <h4>Contact</h4>
 
-               <p>
-    CM Jeelani Dars<br>
-    Institute for Islamic Research and Studies<br>
-    Mayanad, Kozhikode, Kerala
-</p>
+                <p>
+                    CM Jeelani Dars<br>
+                    Institute for Islamic Research and Studies<br>
+                    Mayanad, Kozhikode, Kerala
+                </p>
+
+                <!-- PHONE NUMBERS -->
+                <p class="footer-phone">
+                    <i class="fas fa-phone-alt"></i> 
+                    <a href="tel:9895007795">9895007795</a><br>
+                    <i class="fas fa-phone-alt"></i> 
+                    <a href="tel:9895097795">9895097795</a>
+                </p>
 
                 <!-- SOCIAL -->
                 <div class="footer-social">
@@ -1477,7 +1527,7 @@
 
     </div>
 </footer>
-<!-- FOOTER REMOVED as requested -->
+
 
 <script>
     // scroll animations
