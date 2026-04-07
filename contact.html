@@ -25,16 +25,18 @@
         padding: 20px 10px;
         width: 100%;
     }
+@media (max-width: 768px) {
 
     .gathering-text h2 {
-        font-size: 0.5rem;
-        letter-spacing: 1px;
-        margin-bottom: 1rem;
-        /* REMOVED: white-space: nowrap; - This was causing the overflow */
-        white-space: normal; 
-        word-wrap: break-word;
+        font-size: clamp(0.9rem, 4vw, 1.3rem); /* 🔥 auto responsive */
+        white-space: nowrap;       /* force one line */
+        overflow: hidden;          
+        text-overflow: ellipsis;   /* optional: adds ... if too long */
+        letter-spacing: 0.5px;
         text-align: center;
     }
+
+}
 
     .gathering-text p {
         font-size: 0.95rem;
