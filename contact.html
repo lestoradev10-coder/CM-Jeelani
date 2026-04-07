@@ -9,71 +9,59 @@
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
      <style>/* ===== GATHERING SECTION - MOBILE RESPONSIVE FIXES ===== */
-/* ===== GATHERING SECTION - MOBILE FIX ===== */
+/* ===== GATHERING SECTION - MOBILE REFINED ===== */
 
 @media (max-width: 768px) {
 
     .gathering {
-        width: 100%;
-        margin: 0;
-        padding: 50px 0;
-        min-height: auto;
+        padding: 60px 0;   /* 🔥 more top-bottom space */
     }
 
     .gathering-container {
-        padding: 0 18px;
-        width: 100%;
-        box-sizing: border-box;
+        padding: 0 20px;
     }
 
     .gathering-text {
-        padding: 15px 5px;
+        padding: 10px 0;
         text-align: center;
     }
 
-    /* 🔥 HEADING FIX */
+    /* 🔥 HEADING SMALLER */
     .gathering-text h2 { 
-        color: white; 
-        font-size: 1.4rem;      /* reduced from 3rem */
-        font-weight: 800;
-        margin-bottom: 1rem;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        font-family: 'Poppins', sans-serif;
+        font-size: 1.2rem;     /* reduced more */
         line-height: 1.4;
-        text-align: center;
-        white-space: normal;    /* allow proper wrapping */
+        letter-spacing: 0.8px;
+        margin-bottom: 18px;   /* 🔥 more gap below */
     }
 
-    /* 🔥 PARAGRAPH FIX */
+    /* 🔥 PARAGRAPH SPACING */
     .gathering-text p {
-        font-size: 0.95rem;
-        line-height: 1.6;
-        text-align: center;     /* remove justify for mobile */
-        max-width: 100%;
-        margin-bottom: 1rem;
+        font-size: 0.9rem;
+        line-height: 1.7;
+        margin-bottom: 14px;   /* 🔥 spacing between paragraphs */
+        padding: 0 8px;
     }
 
 }
 
-/* ===== EXTRA SMALL DEVICES ===== */
+
+/* ===== EXTRA SMALL ===== */
 
 @media (max-width: 480px) {
 
     .gathering {
-        padding: 40px 0;
+        padding: 50px 0;
     }
 
     .gathering-text h2 {
-        font-size: 1.2rem;
-        line-height: 1.3;
-        letter-spacing: 0.5px;
+        font-size: 1.05rem;   /* 🔥 even smaller */
+        margin-bottom: 16px;
     }
 
     .gathering-text p {
-        font-size: 0.85rem;
-        padding: 0 5px;
-        line-height: 1.5;
+        font-size: 0.82rem;
+        line-height: 1.6;
+        margin-bottom: 12px;
     }
 
 }/* --- Gathering Section: Centered Professional Look --- */
