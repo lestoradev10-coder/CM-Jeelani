@@ -8,17 +8,77 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-     <style>/* ===== GATHERING MOBILE FIX ===== */
-@media (max-width: 768px) {
+     <style>/* ============================================
+   GATHERING SECTION - FULLY RESPONSIVE FIX
+   ============================================ */
 
+/* Base gathering section (already existing, but we reinforce) */
+.gathering {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 120px 0;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gathering-bg {
+    position: absolute;
+    inset: 0;
+    background: url('img/img7.jpg') center/cover no-repeat;
+    filter: brightness(0.3) contrast(1.1);
+    z-index: 0;
+}
+
+.gathering-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.gathering-text {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    padding: 40px;
+}
+
+.gathering-text h2 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gathering-text p {
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1.9;
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto 1.5rem auto;
+}
+
+/* ========== 🔥 MOBILE RESPONSIVE FIXES FOR GATHERING ========== */
+@media (max-width: 992px) {
     .gathering {
-        width: 100%;
-        margin: 0;
-        left: 0;
-        right: 0;
-
-        padding: 70px 0;   /* reduce spacing */
-        min-height: auto;  /* remove forced height */
+        padding: 80px 0;
+        min-height: auto;
     }
 
     .gathering-container {
@@ -26,26 +86,106 @@
     }
 
     .gathering-text {
-        padding: 20px 10px;
+        padding: 20px 15px;
     }
 
     .gathering-text h2 {
-        font-size: 1.6rem;   /* smaller heading */
+        font-size: 2.2rem;
         letter-spacing: 1px;
-        line-height: 1.3;
+        margin-bottom: 1rem;
+    }
+
+    .gathering-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+        text-align: center;
+        text-align-last: center;
+        padding: 0 5px;
+    }
+}
+
+/* Tablet (portrait) */
+@media (max-width: 768px) {
+    .gathering {
+        padding: 60px 0;
+    }
+
+    .gathering-text {
+        padding: 15px 12px;
+    }
+
+    .gathering-text h2 {
+        font-size: 1.9rem;
+        letter-spacing: 1px;
+        word-break: break-word;
     }
 
     .gathering-text p {
         font-size: 0.95rem;
-        line-height: 1.7;
+        line-height: 1.65;
+    }
+}
 
-        text-align: center;   /* 🔥 remove justify on mobile */
-        text-align-last: center;
+/* Mobile Large (max-width: 576px) */
+@media (max-width: 576px) {
+    .gathering {
+        padding: 50px 0;
     }
 
-    .gathering-bg {
-        background-position: center;
-        background-size: cover;
+    .gathering-container {
+        padding: 0 16px;
+    }
+
+    .gathering-text {
+        padding: 10px 10px;
+    }
+
+    .gathering-text h2 {
+        font-size: 1.6rem;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.8rem;
+        word-break: break-word;
+    }
+
+    .gathering-text p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+        text-align: center;
+    }
+}
+
+/* Mobile Small (max-width: 480px) */
+@media (max-width: 480px) {
+    .gathering {
+        padding: 40px 0;
+    }
+
+    .gathering-text h2 {
+        font-size: 1.4rem;
+        letter-spacing: 0;
+    }
+
+    .gathering-text p {
+        font-size: 0.85rem;
+        line-height: 1.55;
+    }
+}
+
+/* Landscape orientation fix for mobile */
+@media (max-height: 600px) and (orientation: landscape) {
+    .gathering {
+        padding: 30px 0;
+        min-height: auto;
+    }
+
+    .gathering-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .gathering-text p {
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
 }/* --- Gathering Section: Centered Professional Look --- */
 .gathering {
