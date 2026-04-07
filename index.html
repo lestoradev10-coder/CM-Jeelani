@@ -14,7 +14,49 @@
     <!-- Curriculum Section - Left Vertical Image, Right Text -->
 
 
-<style>/* Visionary Leaders Styles */
+<style>/* Mobile: Make skill card image appear FIRST (above text) */
+@media (max-width: 768px) {
+    .skill-card {
+        display: flex;
+        flex-direction: column !important;  /* Stack vertically */
+    }
+    
+    /* Make image container appear BEFORE text on mobile */
+    .skill-card .skill-media {
+        order: 1 !important;  /* Image first */
+        margin-bottom: 20px;
+    }
+    
+    .skill-card .skill-text {
+        order: 2 !important;  /* Text after image */
+    }
+    
+    /* Also fix the reverse class cards */
+    .skill-card.reverse {
+        flex-direction: column !important;
+    }
+    
+    .skill-card.reverse .skill-media {
+        order: 1 !important;
+    }
+    
+    .skill-card.reverse .skill-text {
+        order: 2 !important;
+    }
+}/* Make skill headings stay on one line on mobile */
+.skill-text h3 {
+    white-space: nowrap;  /* Prevents text from wrapping */
+    font-size: 1.2rem;    /* Slightly smaller to fit on one line */
+    overflow-x: auto;     /* Allows scrolling if still too long */
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Alternative: if heading is very long like "COMPUTER SKILL ENHANCEMENT" */
+.skill-text h3 {
+    white-space: normal;  /* Let it wrap but keep as single visual line? */
+    font-size: 1.2rem;
+    text-align: center;
+}/* Visionary Leaders Styles */
 .visionaries-section {
     padding: 80px 0;
     background: #0a0f1f; /* Match your dark theme */
