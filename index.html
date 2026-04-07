@@ -11,7 +11,253 @@
     <!-- CSS styles for the modern gallery -->
    
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <!-- Curriculum Section - Left Vertical Image, Right Text -->
+
+
+<style>/* Visionary Leaders Styles */
+.visionaries-section {
+    padding: 80px 0;
+    background: #0a0f1f; /* Match your dark theme */
+}
+
+.section-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 60px;
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    color: #ffffff; /* White for dark theme */
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    color: #cbd5e6; /* Muted light color for dark theme */
+    line-height: 1.6;
+    font-size: 1.05rem;
+}
+
+.leader-row {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.leader-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.leader-image {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
     
+}
+
+.leader-image img {
+    width: 100%;
+    /* Remove the fixed height or change it to auto to see the full image */
+    height: auto; 
+    max-height: 400px; /* Optional: prevents images from becoming too massive */
+    
+    /* 'contain' ensures the whole image is visible without cropping */
+    object-fit: contain; 
+    
+    
+    
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Mobile fix - slightly smaller max-height for phones */
+@media (max-width: 768px) {
+    .leader-image img {
+        max-height: 400px;
+    }
+}
+
+.leader-image:hover img {
+    transform: scale(1.02);
+}
+
+.leader-content {
+    flex: 1;
+}
+
+.leader-content h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.8rem;
+    color: #ffffff; /* White for dark theme */
+    margin-bottom: 20px;
+}
+
+.leader-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: #cbd5e6; /* Muted light for readability */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .leader-row, 
+    .leader-row.reverse {
+        flex-direction: column;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .leader-image img {
+        height: 300px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .leader-content p {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .visionaries-section {
+        padding: 50px 0;
+    }
+    
+    .leader-image img {
+        height: 250px;
+    }
+    
+    .section-title {
+        font-size: 1.6rem;
+    }
+    
+    .leader-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .leader-content p {
+        font-size: 0.95rem;
+    }
+}
+/* Curriculum specific styles - Left Tall Image, Right Text */
+.curr-flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 70px;
+}
+
+.curr-img {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    margin-top: 160px;  /* More margin top */
+}
+
+.curr-img img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 550px;  /* Taller height */
+    max-height: 650px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 28px;
+    box-shadow: 0 20px 30px -10px black;
+}
+
+.curr-content {
+    flex: 1.2;
+    max-width: 650px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .curr-flex {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .curr-img {
+        order: -1;
+        margin-top: 40px;  /* Reduced margin on mobile */
+        width: 100%;
+    }
+    
+    .curr-img img {
+        min-height: 350px;
+        max-height: 450px;
+    }
+    
+    .curr-content {
+        max-width: 100%;
+    }
+}
+
+    .curr-content {
+        flex: 1.2;
+    }
+
+    .curr-list {
+        list-style: none;
+        margin: 20px 0;
+    }
+
+    .curr-list li {
+        margin-bottom: 12px;
+        padding-left: 24px;
+        position: relative;
+    }
+
+    .curr-list li::before {
+        content: "▹";
+        position: absolute;
+        left: 0;
+        color: #6c9eff;
+    }
+
+    .btn-apply {
+        background: white;
+        color: #0a0f1f;
+        padding: 14px 42px;
+        border-radius: 50px;
+        font-weight: 700;
+        display: inline-block;
+        margin-top: 25px;
+        text-decoration: none;
+        transition: all 0.3s;
+        width: fit-content;
+    }
+
+    .btn-apply:hover {
+        transform: translateY(-3px);
+        background: #eef3ff;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+        .curr-flex {
+            flex-direction: column;
+            gap: 40px;
+        }
+        .curr-img {
+            order: -1;
+            max-height: 400px;
+        }
+        .curr-img img {
+            height: 400px;
+            object-fit: cover;
+        }
+        .curr-content {
+            max-width: 100%;
+        }
+    }
+</style>
     <style>
         .footer-phone {
     margin: 10px 0;
@@ -589,7 +835,7 @@
 }
 .author-title { 
     opacity: 0.7; 
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }     .quote { 
     font-size: 1.2rem; 
     font-weight: 500; 
@@ -662,13 +908,7 @@
             .aff-img img { max-height: 250px; }
         }
 
-        /* curriculum - equal height */
-        .curriculum { background: #0f1425; }
-        .curr-flex { display: flex; flex-wrap: wrap; align-items: stretch; gap: 60px; }
-        .curr-img { flex: 1; display: flex; align-items: center; }
-        .curr-img img { width: 100%; height: 100%; max-height: 420px; object-fit: cover; border-radius: 28px; box-shadow: 0 20px 30px -10px black; }
-        .curr-content { flex: 1.2; display: flex; flex-direction: column; justify-content: center; }
-        .curr-list { list-style: none; margin: 20px 0; }
+             .curr-list { list-style: none; margin: 20px 0; }
         .curr-list li { margin-bottom: 12px; padding-left: 24px; position: relative; }
         .curr-list li::before { content: "▹"; position: absolute; left: 0; color: #6c9eff; }
         .btn-apply {
@@ -746,19 +986,17 @@
     display: flex;
     justify-content: center;
 }
-
 .gathering-text { 
-    max-width: 850px; /* Optimal reading width */
+    max-width: 900px;
     margin: 0 auto;
-    text-align: center;
+    text-align: center;   /* keep heading centered */
     color: white;
     padding: 40px;
-    
 }
 
 .gathering-text h2 { 
     color: white; 
-    font-size: 3rem; /* Bold, large heading */
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
     letter-spacing: 2px;
@@ -766,14 +1004,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.gathering-text p { 
-    color: #e2e8f0;
-    opacity: 1; 
-    margin-bottom: 1.5rem; 
-    line-height: 1.8;
-    font-size: 1.2rem; /* Larger font for readability */
+.gathering-text p {
+    text-align: justify;          /* makes both sides aligned */
+    text-align-last: center;      /* last line centered (nice effect) */
+    line-height: 1.9;
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto 1.5rem auto;  /* center block */
 }
-
 /* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
     .logo-area img {
@@ -1109,6 +1347,7 @@
         }
     </style>
 </head>
+
 <body>
 
 <header class="site-header" id="header">
@@ -1170,6 +1409,40 @@
             </div>
         </div>
     </section>
+   <section class="visionaries-section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2 class="section-title">The visionary figures of our organization</h2>
+            <p class="section-subtitle">
+                CM Jeelani Dars is guided and inspired by great scholars and spiritual leaders whose knowledge and dedication continue to shape our vision and mission.
+            </p>
+        </div>
+
+        <div class="leader-row animate-on-scroll">
+            <div class="leader-image">
+                <img src="img/new1.jpg" alt="Sheikh Abubakr Ahmad">
+            </div>
+            <div class="leader-content">
+                <h3>Sheikh Abubakr Ahmad</h3>
+                <p>
+                    Sheikh Abubakr Ahmad is a distinguished scholar known for his profound knowledge and leadership in Islamic education. His vision and guidance play a vital role in nurturing students with strong faith, discipline, and moral values.
+                </p>
+            </div>
+        </div>
+
+        <div class="leader-row reverse animate-on-scroll">
+            <div class="leader-image">
+                <img src="img/new2.jpg" alt="Sayyid Ali Al-Bafaqi Thangal">
+            </div>
+            <div class="leader-content">
+                <h3>Sayyid Ali Al-Bafaqi Thangal</h3>
+                <p>
+                    Sayyid Ali Al-Bafaqi Thangal is a respected spiritual leader admired for his wisdom, humility, and service to the community. His influence inspires students to pursue knowledge with sincerity and devotion.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Usthad Message - text aligned right -->
     <section class="message-section">
@@ -1183,8 +1456,10 @@
     <h2>USTHAD'S MESSAGE</h2>
     <div class="quote">“CM Jeelani Dars is dedicated to nurturing authentic Islamic knowledge, strong character, and spiritual growth. Our mission is to guide students through the teachings of the Qur'an and Sunnah, preparing them for both faith and life”</div>
     <div class="author-info">
-        <div class="author-name">USTHAD ABDUL SAMAD SAQAFI MAYANAD</div>
-        <div class="author-title">Founder & Director of CM Jeelani Dars</div>
+        <div class="author-name" style="font-size: 1.4rem; font-weight: 700;">USTHAD ABDUL SAMAD SAQAFI MAYANAD</div>
+        <div class="author-title"style="font-style: italic;">Founder & director of cm jeelani dars  &<br>
+Gen. Secretary, Charity Movement Calicut
+</div>
     </div>
     <a href="https://www.facebook.com/samadsaquafimayanad" target="_blank" class="btn-find">FIND OUT MORE</a>
 </div>
@@ -1198,42 +1473,67 @@
             <div class="aff-row">
                 <div class="aff-text animate-on-scroll">
                     <div class="aff-title single-line-title">" MARKAZ AFFILIATION "</div>
-                    <p class="aff-desc">CM Jeelani Dars is proudly affiliated with Markazu Saqafathu Sunniyya, a renowned institution known for its excellence in Islamic education and social service.</p>
+                    <p class="aff-desc">CM Jeelani Dars is proudly affiliated with Markazu Saquafathi Sunniyya, a renowned institution known for its excellence in Islamic education and social service. </p>
                 </div>
                 <div class="aff-img animate-on-scroll"><img src="img/img3.webp" alt="Markaz" onerror="this.src='https://placehold.co/600x400/1f4a7a/ffffff?text=Markaz'"></div>
             </div>
             <!-- Second row: image left, content right -->
             <div class="aff-row">
                 <div class="aff-img animate-on-scroll"><img src="img/img4.webp" alt="Classroom" onerror="this.src='https://placehold.co/600x400/1f4a7a/ffffff?text=Classroom'"></div>
-                <div class="aff-text animate-on-scroll"><p class="aff-desc">Through this affiliation, we follow a well-structured and authentic curriculum that ensures quality education, discipline, and strong moral values. This connection strengthens our mission to provide students with reliable knowledge and proper guidance based on the teachings of Islam.</p></div>
+                <div class="aff-text animate-on-scroll"><p class="aff-desc">Through this affiliation, we follow a well-structured curriculum that ensures quality education, discipline, and strong moral values for our students.
+Students from our institution are eligible for direct admission to Markaz without an entrance interview, providing a smooth and assured pathway to higher Islamic studies. This opportunity helps students continue their education with confidence and ease.
+</p></div>
             </div>
             <div class="courses-divider">=== courses ===</div>
         </div>
     </section>
 
-    <!-- Curriculum -->
     <section class="curriculum">
-        <div class="container">
-            <div class="curr-flex">
-                <div class="curr-img animate-on-scroll"><img src="img/img5.webp" alt="Quran recitation" onerror="this.src='https://placehold.co/550x450/284a72/ffffff?text=Quran'"></div>
-                <div class="curr-content animate-on-scroll">
-                    <h2>CM JEELANI DARS</h2>
-                    <p>CM Jeelani Dars is affiliated to <strong>Markazu Saqafathu Sunniyya</strong> and offers a well-structured Islamic learning program starting from the basics of Qur’an recitation (Makharij) to advanced studies. Admissions are open for students from <strong>6th standard and above</strong>.</p>
-                    <h3 style="margin: 24px 0 12px;">Our curriculum includes:</h3>
-                    <ul class="curr-list">
-                        <li>Qur’an recitation with correct pronunciation</li>
-                        <li>Tajweed and Hifz (memorization)</li>
-                        <li>Islamic studies and moral education</li>
-                        <li>Arabic language basics</li>
-                        <li>Personality and character development</li>
-                    </ul>
-                    <p>We focus on building strong faith, good character, and disciplined living, preparing students to follow Islamic values in their daily lives.</p>
-                    <a href="https://surveyheart.com/form/69cbaca71223071317ccea46" target="_blank" class="btn-apply">APPLY FOR ADMISSION</a>
-                </div>
+    <div class="container">
+        <div class="curr-flex">
+            <div class="curr-img animate-on-scroll">
+                <img src="img/img5.webp" alt="Quran recitation" onerror="this.src='https://placehold.co/500x700/284a72/ffffff?text=Quran'">
+            </div>
+
+            <div class="curr-content animate-on-scroll">
+                <h2>CM JEELANI DARS</h2>
+
+                <p>
+                    CM Jeelani Dars is affiliated with  <i>Markazu Saqafathi Sunniyya</i> and provides a well-structured Islamic and academic learning program, combining modern education with spiritual development. Admissions are open for students from 6th standard and above.
+                </p>
+<h3 style="margin: 24px 0 12px; font-weight: 600; font-size: 1.2rem;">Our Programs Include:</h3>
+                <ul class="curr-list">
+                    <li>Islamic studies with moral and character education</li>
+                    <li>Personality and leadership development</li>
+                    <li>Higher Secondary (+1) streams – Science, Commerce, Humanities</li>
+                    <li>Degree Programs – BSc, BBA, BCom, BA</li>
+                    <li>Multi-language learning – English, Arabic, and more</li>
+                </ul>
+
+                <h3 style="margin: 24px 0 12px; font-weight: 600; font-size: 1.2rem;">Future Opportunities:</h3>
+                <ul class="curr-list">
+                    <li>Assistance for continuing studies (Post Graduation)</li>
+                    <li>Pathways to Al Azhar University</li>
+                    <li>Admission support to Markazu Saqafathi Sunniyya</li>
+                </ul>
+
+               <h3 style="margin: 24px 0 12px; font-weight: 600; font-size: 1.2rem;">Facilities & Activities:</h3>
+                <ul class="curr-list">
+                    <li>Skill development and academic support</li>
+                    <li>Friendly and disciplined campus environment</li>
+                    <li>Study trips (ziyara, industrial visit)</li>
+                    <li>Sports and entertainment for overall growth</li>
+                </ul>
+
+                <p>
+                    We focus on building strong faith, excellent character, and academic success, preparing students for both worldly education and a meaningful spiritual life.
+                </p>
+
+                <a href="https://surveyheart.com/form/69cbaca71223071317ccea46" target="_blank" class="btn-apply">APPLY FOR ADMISSION</a>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Chisthi - equal height -->
     <section class="chisthi">
         <div class="container">
@@ -1253,23 +1553,12 @@
                     <p>Our aim is to help students recite the Qur’an correctly and grow with strong Islamic values.</p>
                     <a href="https://surveyheart.com/form/69cbaca71223071317ccea46" target="_blank" class="btn-apply">APPLY FOR ADMISSION</a>
                 </div>
-                <div class="chisthi-img animate-on-scroll"><img src="img/img6.webp" alt="Hifz" onerror="this.src='https://placehold.co/550x500/1f4770/ffffff?text=Quran+Hifz'"></div>
+                <div class="chisthi-img animate-on-scroll"><img src="img/Picture4.jpg" alt="Hifz" onerror="this.src='https://placehold.co/550x500/1f4770/ffffff?text=Quran+Hifz'"></div>
             </div>
         </div>
     </section>
 
-  <section class="gathering">
-    <div class="gathering-bg"></div>
-    <div class="container">
-        <div class="gathering-container animate-on-scroll">
-            <div class="gathering-text">
-                <h2>HADRATH SHADHULIYA GATHERING</h2>
-                <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
-                <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
-            </div>
-        </div>
-    </div>
-</section>
+ 
 
     <!-- Skills -->
     <section class="skills">
@@ -1293,6 +1582,18 @@ Students are trained through speeches, discussions, and presentations, helping t
             </div>
         </div>
     </section>
+     <section class="gathering">
+    <div class="gathering-bg"></div>
+    <div class="container">
+        <div class="gathering-container animate-on-scroll">
+            <div class="gathering-text">
+                <h2>HADRATH SHADHULIYA GATHERING</h2>
+                <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
+                <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="modern-gallery-section">
     <div class="gallery-container">
@@ -1304,7 +1605,7 @@ Students are trained through speeches, discussions, and presentations, helping t
     <div class="carousel-gallery">
         <div class="carousel-container">
             <div class="carousel-track" id="carouselTrack">
-                <!-- 16 images will be inserted here dynamically via JS -->
+                <!-- Images will be inserted here dynamically via JS -->
             </div>
         </div>
         
@@ -1318,8 +1619,6 @@ Students are trained through speeches, discussions, and presentations, helping t
         <button class="carousel-arrow carousel-next" id="carouselNext">
             <i class="fas fa-chevron-right"></i>
         </button>
-        
-       
     </div>
 
     <!-- Thumbnail preview strip -->
@@ -1329,23 +1628,26 @@ Students are trained through speeches, discussions, and presentations, helping t
         </div>
     </div>
 
-  
-
     <script>
         (function() {
-            // Gallery images array - gal1.jpeg to gal16.jpeg
-            const imageNames = [];
+            // ============================================
+            // COMBINED GALLERY IMAGES
+            // ============================================
+            // Images from gallery folder (gal1.jpeg to gal16.jpeg)
+            const galleryImages = [];
             for (let i = 1; i <= 16; i++) {
-                imageNames.push(`gallery/gal${i}.jpeg`);
+                galleryImages.push(`gallery/gal${i}.jpeg`);
             }
             
-            // Optional captions for each image (customizable)
-            const captions = [
-                "Islamic Learning Session", "Students in Discussion", "Quran Recitation Class",
-                "Annual Gathering", "Hifz Program", "Tajweed Training", "Spiritual Moment",
-                "Community Event", "Knowledge Sharing", "Memorable Day", "Blessed Gathering",
-                "Teaching Session", "Student Achievement", "Prayer Time", "Brotherhood", "CM Jeelani Moments"
+            // Additional images from img folder
+            const additionalImages = [
+                `img/gall1.jpg`,
+                `img/gall2.jpg`,
+                `img/gall3.jpg`
             ];
+            
+            // Combine all images
+            const imageNames = [...galleryImages, ...additionalImages];
             
             let currentIndex = 0;
             let autoSlideInterval = null;
@@ -1357,18 +1659,17 @@ Students are trained through speeches, discussions, and presentations, helping t
             const dotsContainer = document.getElementById('carouselDots');
             const prevBtn = document.getElementById('carouselPrev');
             const nextBtn = document.getElementById('carouselNext');
-          
             const thumbnailTrack = document.getElementById('thumbnailTrack');
             
-            // Build carousel slides
+            // Build carousel slides (NO CAPTIONS)
             function buildCarousel() {
                 track.innerHTML = '';
                 imageNames.forEach((imgSrc, idx) => {
                     const slide = document.createElement('div');
                     slide.className = 'carousel-slide';
-                   slide.innerHTML = `
-    <img src="${imgSrc}" alt="Gallery ${idx + 1}" onerror="this.src='https://placehold.co/1200x800/1e3a8a/ffffff?text=Image+${idx+1}'">
-`;
+                    slide.innerHTML = `
+                        <img src="${imgSrc}" alt="Gallery ${idx + 1}" onerror="this.src='https://placehold.co/1200x800/1e3a8a/ffffff?text=Image+${idx+1}'">
+                    `;
                     track.appendChild(slide);
                 });
             }
@@ -1428,7 +1729,6 @@ Students are trained through speeches, discussions, and presentations, helping t
                 if (index < 0) index = imageNames.length - 1;
                 if (index >= imageNames.length) index = 0;
                 currentIndex = index;
-                const slideWidth = track.parentElement.clientWidth;
                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
                 updateActiveStates();
             }
@@ -1460,21 +1760,6 @@ Students are trained through speeches, discussions, and presentations, helping t
                 isAutoSliding = false;
             }
             
-            // Handle pause/play
-            function pauseAutoSlide() {
-                stopAutoSlide();
-                isAutoSliding = false;
-                pauseBtn.style.display = 'none';
-                playBtn.style.display = 'flex';
-            }
-            
-            function resumeAutoSlide() {
-                startAutoSlide();
-                isAutoSliding = true;
-                pauseBtn.style.display = 'flex';
-                playBtn.style.display = 'none';
-            }
-            
             // Handle window resize to maintain correct position
             function handleResize() {
                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -1502,23 +1787,19 @@ Students are trained through speeches, discussions, and presentations, helping t
                     if (isAutoSliding) startAutoSlide();
                 });
                 
-                
-                
                 window.addEventListener('resize', handleResize);
                 
                 // Start auto sliding
                 startAutoSlide();
                 
-                // Optional: Pause on hover over carousel container only (not arrows)
+                // Pause on hover over carousel container
                 const carouselContainer = document.querySelector('.carousel-container');
                 if (carouselContainer) {
                     carouselContainer.addEventListener('mouseenter', () => {
                         if (isAutoSliding) stopAutoSlide();
                     });
                     carouselContainer.addEventListener('mouseleave', () => {
-                        if (!isAutoSliding && pauseBtn.style.display !== 'none') {
-                            startAutoSlide();
-                        } else if (pauseBtn.style.display !== 'none' && !autoSlideInterval) {
+                        if (!isAutoSliding) {
                             startAutoSlide();
                         }
                     });
@@ -1564,10 +1845,12 @@ Students are trained through speeches, discussions, and presentations, helping t
             <div class="footer-links">
                 <h4>Programs</h4>
                 <ul class="footer-text">
-                    <li>Hifz Program</li>
-                    <li>Tajweed Learning</li>
-                    <li>Islamic Studies</li>
-                    <li>Arabic Basics</li>
+                    <li>CM Jeelani Dars </li>
+                    <li>Chisthi Thahfeelul Qur’an </li>
+                    <li>Hadrath Shadhuliya Gathering </li>
+                    <li>Multi-Language Learning </li>
+                     <li>Spiritual Classes  </li>
+                      <li>Skill Enhancement Programs </li>
                 </ul>
             </div>
 
