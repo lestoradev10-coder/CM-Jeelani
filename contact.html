@@ -8,60 +8,88 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-     <style>/* ===== GATHERING SECTION - MOBILE RESPONSIVE FIXES ===== */
-/* ===== GATHERING SECTION - MOBILE REFINED ===== */
+     <style>/* ===== GATHERING SECTION - MOBILE REFINED ===== */
 
 @media (max-width: 768px) {
-
-    .gathering {
-        padding: 60px 0;   /* 🔥 more top-bottom space */
-    }
-
-    .gathering-container {
-        padding: 0 20px;
-    }
-
-    .gathering-text {
-        padding: 10px 0;
-        text-align: center;
-    }
-
-    /* 🔥 HEADING SMALLER */
-    .gathering-text h2 { 
-        font-size: 1.2rem;     /* reduced more */
-        line-height: 1.4;
-        letter-spacing: 0.8px;
-        margin-bottom: 18px;   /* 🔥 more gap below */
-    }
-
-    /* 🔥 PARAGRAPH SPACING */
-    .gathering-text p {
-        font-size: 0.9rem;
-        line-height: 1.7;
-        margin-bottom: 14px;   /* 🔥 spacing between paragraphs */
-        padding: 0 8px;
-    }
-
-}
-
-
-/* ===== EXTRA SMALL ===== */
-
-@media (max-width: 480px) {
 
     .gathering {
         padding: 50px 0;
     }
 
+    .gathering-container {
+        padding: 0 16px;
+    }
+
+    .gathering-text {
+        padding: 8px 0;
+        text-align: center;
+    }
+
+    /* HEADING - SMALLER */
+    .gathering-text h2 { 
+        font-size: 1rem;
+        line-height: 1.3;
+        letter-spacing: 0.5px;
+        margin-bottom: 14px;
+        white-space: nowrap;
+    }
+
+    /* PARAGRAPH - CLEAN & SPACED */
+    .gathering-text p {
+        font-size: 0.85rem;
+        line-height: 1.65;
+        margin-bottom: 12px;
+        padding: 0 6px;
+    }
+
+}
+
+
+/* ===== EXTRA SMALL (phones under 480px) ===== */
+
+@media (max-width: 480px) {
+
+    .gathering {
+        padding: 40px 0;
+    }
+
+    .gathering-container {
+        padding: 0 12px;
+    }
+
     .gathering-text h2 {
-        font-size: 1.05rem;   /* 🔥 even smaller */
-        margin-bottom: 16px;
+        font-size: 0.85rem;
+        margin-bottom: 12px;
+        letter-spacing: 0.3px;
     }
 
     .gathering-text p {
-        font-size: 0.82rem;
+        font-size: 0.78rem;
         line-height: 1.6;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+        padding: 0 4px;
+    }
+
+}
+
+
+/* ===== VERY SMALL (320px and below) ===== */
+
+@media (max-width: 380px) {
+
+    .gathering {
+        padding: 35px 0;
+    }
+
+    .gathering-text h2 {
+        font-size: 0.75rem;
+        margin-bottom: 10px;
+    }
+
+    .gathering-text p {
+        font-size: 0.72rem;
+        line-height: 1.55;
+        margin-bottom: 8px;
     }
 
 }/* --- Gathering Section: Centered Professional Look --- */
