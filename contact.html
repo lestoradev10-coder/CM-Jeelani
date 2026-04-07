@@ -8,7 +8,68 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <style>
+     <style>/* --- Gathering Section: Centered Professional Look --- */
+.gathering {
+    position: relative;
+    width: 100vw;              /* full viewport width */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;        /* break out of container */
+    margin-right: -50vw;
+
+    padding: 120px 0;
+    min-height: 500px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.gathering-bg {
+    position: absolute;
+    inset: 0;                  /* shorthand for top/left/right/bottom */
+    background: url('img/img7.jpg') center/cover no-repeat;
+    filter: brightness(0.3) contrast(1.1);
+    z-index: 0;
+}
+.gathering-container {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.gathering-text { 
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;   /* keep heading centered */
+    color: white;
+    padding: 40px;
+}
+
+.gathering-text h2 { 
+    color: white; 
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gathering-text p {
+    text-align: justify;          /* makes both sides aligned */
+    text-align-last: center;      /* last line centered (nice effect) */
+    line-height: 1.9;
+    font-size: 1.15rem;
+    max-width: 750px;
+    margin: 0 auto 1.5rem auto;  /* center block */
+}</style><style>
         .footer-phone {
     margin: 10px 0;
 }
@@ -1156,22 +1217,11 @@
                     <a href="https://surveyheart.com/form/69cbaca71223071317ccea46" target="_blank" class="btn-apply">APPLY FOR ADMISSION</a>
                 </div>
                 <div class="program-img">
-                    <img src="img/img6.webp" alt="Quran Hifz" onerror="this.src='https://placehold.co/600x500/1f4770/ffffff?text=Quran+Program'">
+                    <img src="img/Picture4.jpg" alt="Quran Hifz" onerror="this.src='https://placehold.co/600x500/1f4770/ffffff?text=Quran+Program'">
                 </div>
             </div>
 
-            <!-- Hadrath Shadhuliya Gathering -->
-            <div class="program-card reverse animate-on-scroll">
-                <div class="program-info">
-                    <h2>HADRATH SHADHULIYA GATHERING</h2>
-                    <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
-                    <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
-                </div>
-                <div class="program-img">
-                    <img src="img/img7.jpg" alt="Spiritual Gathering" onerror="this.src='https://placehold.co/600x500/3c6e9c/ffffff?text=Gathering'">
-                </div>
-            </div>
-
+           
             <div class="skill-divider">=== SKILL ENHANCEMENT ===</div>
 
             <!-- Computer Skill -->
@@ -1209,8 +1259,19 @@
                 <div class="program-img">
                     <img src="img/img11.webp" alt="Speaking Skills" onerror="this.src='https://placehold.co/600x400/2a658a/ffffff?text=Speaking'">
                 </div></div>
-                    
-           <section class="modern-gallery-section">
+                     <section class="gathering">
+    <div class="gathering-bg"></div>
+    <div class="gathering-overlay"></div>
+    <div class="gathering-container animate-on-scroll">
+        <div class="gathering-text">
+            <h2>HADRATH SHADHULIYA GATHERING</h2>
+            <p>At CM Jeelani Dars, we conduct a monthly Hadrath Shadhuliya gathering as a part of our spiritual activities. This program helps students and the community strengthen their connection with Allah through dhikr, du'a, and remembrance.</p>
+            <p>It is a time for spiritual reflection, unity, and renewal of faith. Through this gathering, we aim to create a peaceful environment that nurtures love for Islamic traditions and strengthens the spiritual well-being of everyone involved.</p>
+        </div>
+    </div>
+</section>
+
+         <section class="modern-gallery-section">
     <div class="gallery-container">
         <div class="skill-divider" style="margin-bottom: 1rem;">=== MEMORIES AND MOMENTS ===</div>
         <h2 class="gallery-title" style="color: white; text-align: center; font-size: 1.8rem; margin-bottom: 2rem;">OUR GALLERY</h2>
@@ -1220,7 +1281,7 @@
     <div class="carousel-gallery">
         <div class="carousel-container">
             <div class="carousel-track" id="carouselTrack">
-                <!-- 16 images will be inserted here dynamically via JS -->
+                <!-- Images will be inserted here dynamically via JS -->
             </div>
         </div>
         
@@ -1234,8 +1295,6 @@
         <button class="carousel-arrow carousel-next" id="carouselNext">
             <i class="fas fa-chevron-right"></i>
         </button>
-        
-       
     </div>
 
     <!-- Thumbnail preview strip -->
@@ -1245,23 +1304,26 @@
         </div>
     </div>
 
-  
-
     <script>
         (function() {
-            // Gallery images array - gal1.jpeg to gal16.jpeg
-            const imageNames = [];
+            // ============================================
+            // COMBINED GALLERY IMAGES
+            // ============================================
+            // Images from gallery folder (gal1.jpeg to gal16.jpeg)
+            const galleryImages = [];
             for (let i = 1; i <= 16; i++) {
-                imageNames.push(`gallery/gal${i}.jpeg`);
+                galleryImages.push(`gallery/gal${i}.jpeg`);
             }
             
-            // Optional captions for each image (customizable)
-            const captions = [
-                "Islamic Learning Session", "Students in Discussion", "Quran Recitation Class",
-                "Annual Gathering", "Hifz Program", "Tajweed Training", "Spiritual Moment",
-                "Community Event", "Knowledge Sharing", "Memorable Day", "Blessed Gathering",
-                "Teaching Session", "Student Achievement", "Prayer Time", "Brotherhood", "CM Jeelani Moments"
+            // Additional images from img folder
+            const additionalImages = [
+                `img/gall1.jpg`,
+                `img/gall2.jpg`,
+                `img/gall3.jpg`
             ];
+            
+            // Combine all images
+            const imageNames = [...galleryImages, ...additionalImages];
             
             let currentIndex = 0;
             let autoSlideInterval = null;
@@ -1273,18 +1335,17 @@
             const dotsContainer = document.getElementById('carouselDots');
             const prevBtn = document.getElementById('carouselPrev');
             const nextBtn = document.getElementById('carouselNext');
-          
             const thumbnailTrack = document.getElementById('thumbnailTrack');
             
-            // Build carousel slides
+            // Build carousel slides (NO CAPTIONS)
             function buildCarousel() {
                 track.innerHTML = '';
                 imageNames.forEach((imgSrc, idx) => {
                     const slide = document.createElement('div');
                     slide.className = 'carousel-slide';
-                   slide.innerHTML = `
-    <img src="${imgSrc}" alt="Gallery ${idx + 1}" onerror="this.src='https://placehold.co/1200x800/1e3a8a/ffffff?text=Image+${idx+1}'">
-`;
+                    slide.innerHTML = `
+                        <img src="${imgSrc}" alt="Gallery ${idx + 1}" onerror="this.src='https://placehold.co/1200x800/1e3a8a/ffffff?text=Image+${idx+1}'">
+                    `;
                     track.appendChild(slide);
                 });
             }
@@ -1344,7 +1405,6 @@
                 if (index < 0) index = imageNames.length - 1;
                 if (index >= imageNames.length) index = 0;
                 currentIndex = index;
-                const slideWidth = track.parentElement.clientWidth;
                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
                 updateActiveStates();
             }
@@ -1376,21 +1436,6 @@
                 isAutoSliding = false;
             }
             
-            // Handle pause/play
-            function pauseAutoSlide() {
-                stopAutoSlide();
-                isAutoSliding = false;
-                pauseBtn.style.display = 'none';
-                playBtn.style.display = 'flex';
-            }
-            
-            function resumeAutoSlide() {
-                startAutoSlide();
-                isAutoSliding = true;
-                pauseBtn.style.display = 'flex';
-                playBtn.style.display = 'none';
-            }
-            
             // Handle window resize to maintain correct position
             function handleResize() {
                 track.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -1418,23 +1463,19 @@
                     if (isAutoSliding) startAutoSlide();
                 });
                 
-                
-                
                 window.addEventListener('resize', handleResize);
                 
                 // Start auto sliding
                 startAutoSlide();
                 
-                // Optional: Pause on hover over carousel container only (not arrows)
+                // Pause on hover over carousel container
                 const carouselContainer = document.querySelector('.carousel-container');
                 if (carouselContainer) {
                     carouselContainer.addEventListener('mouseenter', () => {
                         if (isAutoSliding) stopAutoSlide();
                     });
                     carouselContainer.addEventListener('mouseleave', () => {
-                        if (!isAutoSliding && pauseBtn.style.display !== 'none') {
-                            startAutoSlide();
-                        } else if (pauseBtn.style.display !== 'none' && !autoSlideInterval) {
+                        if (!isAutoSliding) {
                             startAutoSlide();
                         }
                     });
@@ -1450,7 +1491,6 @@
         })();
     </script>
 </section>
-    </section>
 </main>
 <footer class="cm-footer">
     <div class="footer-container">
@@ -1481,10 +1521,12 @@
             <div class="footer-links">
                 <h4>Programs</h4>
                 <ul class="footer-text">
-                    <li>Hifz Program</li>
-                    <li>Tajweed Learning</li>
-                    <li>Islamic Studies</li>
-                    <li>Arabic Basics</li>
+                    <li>CM Jeelani Dars </li>
+                    <li>Chisthi Thahfeelul Qur’an </li>
+                    <li>Hadrath Shadhuliya Gathering </li>
+                    <li>Multi-Language Learning </li>
+                     <li>Spiritual Classes  </li>
+                      <li>Skill Enhancement Programs </li>
                 </ul>
             </div>
 
@@ -1529,6 +1571,8 @@
 </footer>
 
 
+
+
 <script>
     // scroll animations
     const animateElements = document.querySelectorAll('.animate-on-scroll');
@@ -1539,35 +1583,25 @@
                 observer.unobserve(entry.target);
             }
         });
-    }, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
     animateElements.forEach(el => observer.observe(el));
 
-    // mobile menu
+    // hamburger menu
     const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobileMenu');
     const closeMenuBtn = document.getElementById('closeMenu');
     function openMenu() { mobileMenu.classList.add('active'); document.body.style.overflow = 'hidden'; }
     function closeMenu() { mobileMenu.classList.remove('active'); document.body.style.overflow = ''; }
-    if (hamburger) hamburger.addEventListener('click', openMenu);
-    if (closeMenuBtn) closeMenuBtn.addEventListener('click', closeMenu);
+    hamburger?.addEventListener('click', openMenu);
+    closeMenuBtn?.addEventListener('click', closeMenu);
     document.querySelectorAll('.mobile-menu a').forEach(link => link.addEventListener('click', closeMenu));
 
-    // sticky header (keeping consistent)
+    // sticky header
     window.addEventListener('scroll', () => {
         const header = document.getElementById('header');
         if (window.scrollY > 50) header.classList.add('scrolled');
         else header.classList.remove('scrolled');
     });
-
-    // form submission handler
-    const contactForm = document.getElementById('contactForm');
-    if(contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for reaching out! Our team will get back to you shortly.');
-            contactForm.reset();
-        });
-    }
 </script>
 </body>
 </html>
