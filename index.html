@@ -14,24 +14,36 @@
     <!-- Curriculum Section - Left Vertical Image, Right Text -->
 
 
-<style>/* Mobile: Make skill card image appear FIRST (above text) */
+<style>/* ===== CORRECTED MOBILE CSS FOR SKILL ENHANCEMENT ===== */
+/* Image appears FIRST above text | Heading stays on ONE LINE */
+
 @media (max-width: 768px) {
+    
+    /* Force skill cards to stack vertically */
     .skill-card {
-        display: flex;
-        flex-direction: column !important;  /* Stack vertically */
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        margin-bottom: 50px !important;
     }
     
-    /* Make image container appear BEFORE text on mobile */
+    /* IMAGE FIRST - appears above everything */
     .skill-card .skill-media {
-        order: 1 !important;  /* Image first */
-        margin-bottom: 20px;
+        order: 1 !important;
+        margin-bottom: 15px !important;
+        width: 100% !important;
+        display: flex !important;
+        justify-content: center !important;
     }
     
+    /* TEXT AFTER image */
     .skill-card .skill-text {
-        order: 2 !important;  /* Text after image */
+        order: 2 !important;
+        text-align: center !important;
+        padding: 0 10px !important;
     }
     
-    /* Also fix the reverse class cards */
+    /* Fix for reverse class cards */
     .skill-card.reverse {
         flex-direction: column !important;
     }
@@ -43,15 +55,172 @@
     .skill-card.reverse .skill-text {
         order: 2 !important;
     }
-}/* Make skill headings stay on one line on mobile */
-.skill-text h3 {
-    white-space: nowrap;  /* Prevents text from wrapping */
-    font-size: 1.6rem;    /* Slightly smaller to fit on one line */
-    overflow-x: auto;     /* Allows scrolling if still too long */
-    -webkit-overflow-scrolling: touch;
+    
+    /* ===== HEADING IN ONE LINE ===== */
+    .skill-text h3 {
+        white-space: nowrap !important;
+        font-size: 1.4rem !important;
+        overflow-x: visible !important;
+        text-align: center !important;
+        margin-bottom: 15px !important;
+        letter-spacing: -0.3px !important;
+    }
+    
+    /* Image container fixes */
+    .pill-frame-light {
+        max-width: 280px !important;
+        margin: 0 auto !important;
+        border-radius: 100px !important;
+    }
+    
+    .pill-frame-light img {
+        width: 100% !important;
+        border-radius: 90px !important;
+    }
+    
+    .circle-overlap {
+        width: 220px !important;
+        height: 220px !important;
+        margin: 0 auto !important;
+        position: relative !important;
+    }
+    
+    .circle-overlap img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        border-radius: 50% !important;
+        position: relative !important;
+        z-index: 2 !important;
+    }
+    
+    .circle-overlap::before {
+        content: "" !important;
+        position: absolute !important;
+        top: -12px !important;
+        left: -16px !important;
+        width: 100% !important;
+        height: 100% !important;
+        background: #2d4a7c !important;
+        opacity: 0.3 !important;
+        border-radius: 50% !important;
+        z-index: 1 !important;
+    }
+    
+    /* Paragraph styling */
+    .skill-text p {
+        font-size: 0.95rem !important;
+        line-height: 1.6 !important;
+        text-align: center !important;
+        max-width: 100% !important;
+    }
+    
+    /* Divider */
+    .skill-divider {
+        margin-bottom: 40px !important;
+        text-align: center !important;
+        font-size: 0.85rem !important;
+    }
 }
 
-/* Visionary Leaders Styles */
+/* For smaller phones - adjust heading size but keep on one line */
+@media (max-width: 480px) {
+    .skill-text h3 {
+        font-size: 1.2rem !important;
+        white-space: nowrap !important;
+    }
+    
+    .circle-overlap {
+        width: 180px !important;
+        height: 180px !important;
+    }
+    
+    .pill-frame-light {
+        max-width: 240px !important;
+    }
+}
+
+/* For very small screens (like 320px) - heading still one line */
+@media (max-width: 380px) {
+    .skill-text h3 {
+        font-size: 1.05rem !important;
+        white-space: nowrap !important;
+    }
+}/* ===== FINAL FIX: SKILL HEADINGS + IMAGE ORDER ===== */
+@media (max-width: 768px) {
+
+    /* 🔥 IMAGE FIRST */
+    .program-card {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 25px;
+    }
+
+    .program-img {
+        order: -1 !important; /* force image on top */
+    }
+
+    .program-info {
+        order: 2 !important;
+        text-align: center;
+    }
+
+    .program-card.reverse {
+        flex-direction: column !important;
+    }
+
+    /* 🔥 HEADING ONE LINE (NO BREAK) */
+    .program-info h3 {
+        display: block !important;
+        width: 100% !important;
+
+        white-space: nowrap !important;   /* no wrap */
+        overflow-x: auto !important;      /* scroll if long */
+        overflow-y: hidden !important;
+
+        font-size: 0.95rem !important;    /* fit in one line */
+        text-align: center !important;
+
+        scrollbar-width: none;
+    }
+
+    .program-info h3::-webkit-scrollbar {
+        display: none;
+    }
+}/* ===== SKILL HEADING ONE LINE (MOBILE ONLY) ===== */
+@media (max-width: 768px) {
+    .program-info h3 {
+        white-space: nowrap;      /* force single line */
+        overflow: hidden;         /* hide overflow */
+        text-overflow: ellipsis;  /* show ... if too long */
+        font-size: 1rem;          /* reduce size to fit */
+        text-align: center;
+    }
+}/* ===== IMAGE FIRST ON MOBILE ===== */
+@media (max-width: 768px) {
+
+    .program-card {
+        display: flex;
+        flex-direction: column !important;
+        gap: 25px;
+    }
+
+    /* IMAGE FIRST */
+    .program-img {
+        order: 1;
+    }
+
+    /* TEXT AFTER */
+    .program-info {
+        order: 2;
+        text-align: center;
+    }
+
+    /* REMOVE reverse effect */
+    .program-card.reverse {
+        flex-direction: column !important;
+    }
+}/* Visionary Leaders Styles */
 .visionaries-section {
     padding: 80px 0;
     background: #0a0f1f; /* Match your dark theme */
@@ -1095,7 +1264,7 @@
         .skill-card { display: flex; flex-wrap: wrap; align-items: stretch; gap: 60px; margin-bottom: 90px; }
         .skill-card.reverse { flex-direction: row-reverse; }
         .skill-text { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-        .skill-text h3 { margin-bottom: 20px; }
+        
         .skill-media { flex: 1; display: flex; align-items: center; justify-content: center; }
         .pill-frame-light { background: white; padding: 10px; border-radius: 100px; max-width: 360px; width: 100%; }
         .pill-frame-light img { width: 100%; border-radius: 90px; display: block; }
