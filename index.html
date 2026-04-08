@@ -16,7 +16,57 @@
 
 <style>/* ===== CORRECTED MOBILE CSS FOR SKILL ENHANCEMENT ===== */
 /* Image appears FIRST above text | Heading stays on ONE LINE */
+/* ===== AFFILIATION TEXT AS SQUARE BLOCK WITH MARGINS ===== */
+.aff-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 70px;
+}
 
+/* THIS IS THE KEY - Makes text a square/aligned block */
+.aff-text {
+    flex: 1;
+    max-width: 550px;  /* Limits width - creates square/rectangle feel */
+    margin: 0 auto;     /* Centers the text block */
+    padding: 20px 0;
+}
+
+/* The paragraph gets constrained width */
+.aff-desc {
+    max-width: 100%;
+    text-align: justify;  /* Makes both edges straight like a square */
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* Optional: Add subtle left border for "block" feel */
+.aff-text {
+    
+    padding-left: 28px;
+}
+
+/* For the reverse row (image left, text right) - keep same text width */
+.aff-row.reverse .aff-text {
+    margin: 0 auto;
+    
+    padding-left: 28px;
+}
+
+/* Mobile: remove border, keep text readable */
+@media (max-width: 768px) {
+    .aff-text {
+        max-width: 100%;
+        border-left: none;
+        padding-left: 0;
+        text-align: center;
+    }
+    
+    .aff-desc {
+        text-align: center;
+    }
+}
 @media (max-width: 768px) {
     
     /* Force skill cards to stack vertically */
